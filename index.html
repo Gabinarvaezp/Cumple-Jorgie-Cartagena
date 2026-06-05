@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jorgie 30 · Cartagena 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5EFE5;--surface:#FDFAF5;--deep:#18243A;--ocean:#1D6278;--teal:#28A0BE;
+  --gold:#C08A2E;--gold2:#E0AD50;--green:#217A4A;--coral:#C44A28;
+  --muted:#6A7585;--border:rgba(24,36,58,.09);
+  --r:16px;--r2:10px;--sh:0 2px 18px rgba(24,36,58,.07)
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--deep);min-height:100vh;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{background:var(--deep);color:#fff;padding:2rem 1.25rem 3.2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,rgba(40,160,190,.28) 0%,transparent 60%)}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:36px;background:var(--bg);clip-path:ellipse(56% 100% at 50% 100%)}
+.hero-inner{position:relative;z-index:1}
+.hero-eye{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:600;margin-bottom:8px}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(24px,7vw,44px);line-height:1.08;font-weight:700;margin-bottom:12px}
+.hero-title em{color:var(--gold2);font-style:italic}
+.hero-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.hchip{font-size:11px;padding:4px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;color:rgba(255,255,255,.78);background:rgba(255,255,255,.06)}
+
+/* ── TABS ── */
+.tabs{display:flex;gap:6px;padding:.8rem 1.25rem .4rem;overflow-x:auto;scrollbar-width:none;background:var(--bg);position:sticky;top:0;z-index:80;border-bottom:1px solid var(--border)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;font-size:12px;font-weight:500;padding:6px 14px;border:1.5px solid var(--border);border-radius:999px;cursor:pointer;background:var(--surface);color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;transition:all .15s}
+.tab.on{background:var(--deep);color:#fff;border-color:var(--deep)}
+
+/* ── MAIN ── */
+.main{padding:.85rem 1.25rem 6rem}
+.sec{display:none;animation:fu .2s ease both}
+.sec.on{display:block}
+@keyframes fu{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* ── DIVIDER ── */
+.dv{font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-weight:600;margin:1.6rem 0 .75rem;display:flex;align-items:center;gap:8px}
+.dv::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── CARDS MÉTRICAS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:.85rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:.85rem}
+.mc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.9rem 1rem;box-shadow:var(--sh)}
+.mc.dk{background:var(--deep)}
+.ml{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.mc.dk .ml{color:rgba(255,255,255,.35)}
+.mv{font-family:'Playfair Display',serif;font-size:19px;line-height:1.1;font-weight:600}
+.mc.dk .mv{color:var(--gold2)}
+.ms{font-size:10.5px;color:var(--muted);margin-top:2px}
+.mc.dk .ms{color:rgba(255,255,255,.32)}
+.mu{font-size:10px;color:var(--teal);font-weight:500;margin-top:2px}
+
+/* ── BARRA SPLIT ── */
+.spc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:.95rem 1.1rem;margin-bottom:.85rem;box-shadow:var(--sh)}
+.sbar{height:8px;border-radius:999px;overflow:hidden;display:flex;margin:6px 0 5px;background:var(--bg)}
+.sleg{display:flex;gap:12px;flex-wrap:wrap}
+.sdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.si{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted)}
+
+/* ── TABLA ACTIVIDADES ── */
+.tw{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:.85rem;box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+thead{background:var(--deep)}
+th{padding:8px 10px;text-align:left;font-size:8.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;color:rgba(255,255,255,.45);white-space:nowrap}
+td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+.tf td{border-top:1.5px solid var(--border);font-weight:600;background:rgba(24,36,58,.025)}
+.tog{width:38px;height:22px;border-radius:999px;background:var(--bg);border:none;cursor:pointer;position:relative;transition:.2s;display:inline-block;flex-shrink:0}
+.tog.on{background:var(--green)}
+.tog::after{content:'';position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;top:3px;left:3px;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.tog.on::after{left:19px}
+.act-off td{opacity:.35}
+@media(max-width:400px){th:nth-child(3),td:nth-child(3){display:none}}
+
+/* ── AGENDA ── */
+.agenda{display:flex;flex-direction:column;gap:10px}
+.aday{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+
+/* Cabecera día */
+.dhdr{display:flex;align-items:center;padding:12px 14px;cursor:pointer;user-select:none;gap:11px;transition:background .12s}
+.dhdr:active{background:rgba(24,36,58,.03)}
+.dnum{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--gold);line-height:1;flex-shrink:0;width:30px;text-align:center}
+.dinfo{flex:1;min-width:0}
+.dfecha{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.dtit{font-size:12.5px;font-weight:600;color:var(--deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dbadges{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
+.db{font-size:9px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--bg);color:var(--muted)}
+.db.g{background:#DFF4EA;color:var(--green)}
+.db.y{background:rgba(192,138,46,.13);color:var(--gold)}
+.db.r{background:rgba(196,74,40,.1);color:var(--coral)}
+.darrow{font-size:14px;color:var(--muted);transition:transform .22s;flex-shrink:0}
+.aday.open .darrow{transform:rotate(180deg)}
+
+/* Body colapsable */
+.dbody{display:none;border-top:1px solid var(--border)}
+.aday.open .dbody{display:block}
+
+/* Fila evento */
+.ev{display:grid;grid-template-columns:46px 20px 1fr;gap:0 7px;align-items:start;padding:10px 14px;border-bottom:1px solid var(--border);position:relative}
+.ev:last-of-type{border-bottom:none}
+.etime{font-size:10px;font-weight:700;color:var(--muted);padding-top:2px;letter-spacing:.2px;white-space:nowrap}
+.eico{font-size:14px;padding-top:1px}
+.ebody{}
+.ename{font-size:12.5px;font-weight:600;line-height:1.3;margin-bottom:1px}
+.edesc{font-size:11px;color:var(--muted);line-height:1.5}
+.eprice{font-size:11.5px;font-weight:700;color:var(--teal);margin-top:2px}
+.eprice.fr{color:var(--green)}
+
+/* lugar strip */
+.lstrip{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:9px;padding:9px 14px;border-bottom:1px solid var(--border);background:rgba(24,36,58,.016)}
+.lstrip:last-of-type{border-bottom:none}
+.lico{font-size:20px;text-align:center}
+.lname{font-size:12px;font-weight:700;margin-bottom:1px}
+.lsub{font-size:10.5px;color:var(--muted);line-height:1.4}
+.llink{font-size:10px;color:var(--teal);font-weight:600;text-decoration:none}
+.lbadge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;display:inline-block;white-space:nowrap}
+.lbadge.ok{background:#DFF4EA;color:var(--green)}
+.lbadge.w{background:#FDF3DC;color:#7A4F00}
+
+/* comparar */
+.ops{border-bottom:1px solid var(--border)}
+.opshdr{background:var(--deep);padding:6px 14px;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:700}
+.oprow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;padding:9px 14px;border-top:1px solid var(--border);background:var(--surface)}
+.opname{font-size:12px;font-weight:600;margin-bottom:1px}
+.opdesc{font-size:10.5px;color:var(--muted);line-height:1.4}
+.oplink{font-size:10px;color:var(--teal);font-weight:600;text-decoration:none;display:inline-block;margin-top:2px}
+.opprice{font-size:12.5px;font-weight:700;color:var(--teal);text-align:right;white-space:nowrap}
+.oppp{font-size:9.5px;color:var(--muted);text-align:right}
+.opbest{font-size:8.5px;font-weight:700;color:var(--green);background:#DFF4EA;padding:1px 6px;border-radius:999px;display:inline-block;margin-left:4px;vertical-align:middle}
+
+/* ara btn */
+.ara-btn{display:flex;align-items:center;gap:7px;padding:9px 14px;border:none;background:none;border-top:1px solid var(--border);font-size:12px;font-weight:600;color:var(--green);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;width:100%;transition:background .12s}
+.ara-btn:active{background:rgba(33,122,74,.06)}
+
+/* add ev */
+.addEv-btn{display:flex;align-items:center;gap:6px;padding:9px 14px;border:none;background:none;border-top:1px solid var(--border);font-size:11.5px;font-weight:500;color:var(--teal);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;width:100%;transition:background .12s}
+.addEv-btn:active{background:rgba(40,160,190,.06)}
+
+/* ── FAB AJUSTES ── */
+.fab{position:fixed;bottom:24px;right:20px;z-index:100;width:54px;height:54px;border-radius:50%;background:var(--deep);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(24,36,58,.35);transition:transform .15s,box-shadow .15s}
+.fab:active{transform:scale(.93);box-shadow:0 2px 10px rgba(24,36,58,.25)}
+
+/* ── SHEET MODAL (bottom) ── */
+.sheet-bg{display:none;position:fixed;inset:0;background:rgba(24,36,58,.6);z-index:200;align-items:flex-end;justify-content:center}
+.sheet-bg.on{display:flex}
+.sheet{background:var(--surface);border-radius:var(--r) var(--r) 0 0;width:100%;max-width:600px;max-height:92vh;overflow-y:auto;padding:0 0 2rem}
+.sheet-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:10px auto 0}
+.sheet-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;padding:14px 18px 0}
+.sheet-sub{font-size:11.5px;color:var(--muted);padding:3px 18px 14px;border-bottom:1px solid var(--border)}
+.ssec{font-size:9px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:700;padding:14px 18px 6px;border-bottom:1px solid var(--border)}
+.sfield{padding:10px 18px;border-bottom:1px solid var(--border)}
+.sfield label{display:block;font-size:10.5px;color:var(--muted);font-weight:500;margin-bottom:4px}
+.sfield input{width:100%;padding:9px 11px;border:1.5px solid var(--border);border-radius:var(--r2);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--deep);background:#fff}
+.sfield input:focus{outline:none;border-color:var(--teal)}
+.s2{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.s2 .sfield{border-right:1px solid var(--border)}
+.s2 .sfield:last-child{border-right:none}
+.act-row-m{display:grid;grid-template-columns:1fr 100px 34px;gap:6px;align-items:center;padding:8px 18px;border-bottom:1px solid var(--border)}
+.act-row-m input{padding:7px 9px;font-size:12.5px;border:1.5px solid var(--border);border-radius:var(--r2);font-family:'Plus Jakarta Sans',sans-serif;width:100%}
+.act-row-m input:focus{outline:none;border-color:var(--teal)}
+.adel{background:none;border:1.5px solid var(--border);border-radius:var(--r2);cursor:pointer;font-size:13px;padding:5px 6px;color:var(--coral);transition:all .15s;display:flex;align-items:center;justify-content:center}
+.adel:active{background:#fae5df}
+.add-row{display:flex;gap:7px;align-items:center;padding:10px 18px;border-bottom:1px solid var(--border)}
+.add-row input{flex:1;padding:8px 10px;font-size:13px;border:1.5px solid var(--border);border-radius:var(--r2);font-family:'Plus Jakarta Sans',sans-serif}
+.add-row input:focus{outline:none;border-color:var(--teal)}
+.add-row button{white-space:nowrap;padding:8px 13px;font-size:12px;font-weight:600;border:none;border-radius:var(--r2);background:var(--teal);color:#fff;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+.sheet-save{display:block;margin:16px 18px 0;width:calc(100% - 36px);padding:13px;border:none;border-radius:var(--r2);background:var(--deep);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer}
+
+/* ── SHEET EDITAR EVENTO ── */
+.evsheet-bg{display:none;position:fixed;inset:0;background:rgba(24,36,58,.6);z-index:300;align-items:flex-end;justify-content:center}
+.evsheet-bg.on{display:flex}
+.evsheet{background:var(--surface);border-radius:var(--r) var(--r) 0 0;width:100%;max-width:600px;padding:0 0 2rem}
+.evsheet-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:10px auto 0}
+.evsheet-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;padding:12px 18px 12px;border-bottom:1px solid var(--border)}
+.evfield{padding:10px 18px;border-bottom:1px solid var(--border)}
+.evfield label{display:block;font-size:10.5px;color:var(--muted);font-weight:500;margin-bottom:4px}
+.evfield input{width:100%;padding:9px 11px;border:1.5px solid var(--border);border-radius:var(--r2);font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--deep);background:#fff}
+.evfield input:focus{outline:none;border-color:var(--teal)}
+.ev2{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.ev2 .evfield{border-right:1px solid var(--border)}
+.ev2 .evfield:last-child{border-right:none}
+.evbtns{display:flex;gap:8px;padding:14px 18px 0;flex-wrap:wrap}
+.ev-save{flex:1;padding:12px;border:none;border-radius:var(--r2);background:var(--deep);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;font-weight:600;cursor:pointer}
+.ev-del{padding:12px 16px;border:1.5px solid var(--coral);border-radius:var(--r2);background:none;color:var(--coral);font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;cursor:pointer}
+
+/* ── ARA POPUP ── */
+.ara-bg{display:none;position:fixed;inset:0;background:rgba(24,36,58,.6);z-index:400;align-items:flex-end;justify-content:center}
+.ara-bg.on{display:flex}
+.ara-sheet{background:var(--surface);border-radius:var(--r) var(--r) 0 0;width:100%;max-width:560px;max-height:85vh;overflow-y:auto;padding:0 0 2rem}
+.ara-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:10px auto 0}
+.ara-ttl{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;padding:12px 18px 0}
+.ara-sub2{font-size:11px;color:var(--muted);padding:2px 18px 10px;border-bottom:1px solid var(--border)}
+.ara-hdr{display:grid;grid-template-columns:1fr auto auto;gap:10px;padding:6px 18px;font-size:8.5px;letter-spacing:1.5px;font-weight:700;text-transform:uppercase;color:var(--muted)}
+.ara-item{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px;background:var(--bg);border-radius:var(--r2);padding:9px 14px;margin:0 18px 6px}
+.ara-prod{font-size:12px;font-weight:500}
+.ara-ara{font-size:12px;font-weight:700;color:var(--green);text-align:right}
+.ara-playa{font-size:12px;font-weight:600;color:var(--coral);text-align:right}
+.ara-nota{font-size:11.5px;background:#FDF3DC;border-left:3px solid var(--gold);padding:10px 14px;margin:8px 18px;border-radius:0 var(--r2) var(--r2) 0;color:#4A3000}
+.ara-tip{font-size:11px;color:var(--muted);padding:0 18px;line-height:1.7}
+.ara-close{display:block;margin:16px 18px 0;width:calc(100% - 36px);padding:12px;border:none;border-radius:var(--r2);background:var(--deep);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer}
+
+/* ── UBERS ── */
+.dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:8px;margin-bottom:.85rem}
+.dc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:11px 12px;box-shadow:var(--sh)}
+.dr{font-size:12px;font-weight:600;margin-bottom:2px}
+.dd{font-size:10.5px;color:var(--muted);line-height:1.5}
+.dp{font-size:11.5px;font-weight:700;color:var(--teal);margin-top:3px}
+.dpf{color:var(--green)}
+
+/* ── FRASES ── */
+.fgrid{display:grid;gap:9px;margin-bottom:.85rem}
+.fcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:12px 14px;box-shadow:var(--sh)}
+.ftop{display:flex;gap:9px;align-items:flex-start;margin-bottom:7px}
+.fico{font-size:18px;flex-shrink:0}
+.fq{font-size:12px;font-weight:700}
+.fa{font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.fsay{font-size:12.5px;font-weight:600;color:var(--ocean);font-style:italic;line-height:1.55;background:rgba(29,98,120,.06);border-radius:var(--r2);padding:9px 12px;border-left:3px solid var(--teal)}
+
+/* ── TIPS ── */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:9px}
+.tcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;box-shadow:var(--sh)}
+.tico{font-size:20px;margin-bottom:6px}
+.ttit{font-size:12.5px;font-weight:600;margin-bottom:4px}
+.tbody{font-size:11px;color:var(--muted);line-height:1.65}
+.cl{list-style:none;display:flex;flex-direction:column;gap:4px;margin-top:5px}
+.cl li{font-size:11px;color:var(--muted);display:flex;gap:6px;line-height:1.5;align-items:flex-start}
+.cl li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+
+.footer{text-align:center;padding:1.4rem 1rem;font-size:11px;color:var(--muted);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eye">Plan de viaje · Edición especial</div>
+    <h1 class="hero-title">Cartagena para el<br>cumpleaños de <em id="hN">Jorgie</em> 3️⃣0️⃣🎂</h1>
+    <div class="hero-chips">
+      <div class="hchip">📅 <span id="hF">1–6 Jul 2025</span></div>
+      <div class="hchip">👥 6 personas</div>
+      <div class="hchip">🏨 OZ Collection</div>
+      <div class="hchip">💰 <span id="hT">$3.500/USD</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab on" onclick="show('costos',this)">Costos</button>
+  <button class="tab" onclick="show('itinerario',this)">Itinerario</button>
+  <button class="tab" onclick="show('ubers',this)">Ubers</button>
+  <button class="tab" onclick="show('frases',this)">Frases</button>
+  <button class="tab" onclick="show('tips',this)">Tips</button>
+</div>
+
+<div class="main">
+
+<!-- ══ COSTOS ══ -->
+<div id="costos" class="sec on">
+  <div class="dv">Alojamiento — ya pagado</div>
+  <div class="g2">
+    <div class="mc"><div class="ml">Hotel OZ Collection</div><div class="mv" id="mH">—</div><div class="mu" id="mHu">—</div></div>
+    <div class="mc"><div class="ml">Airbnb Marbella</div><div class="mv" id="mA">—</div><div class="mu" id="mAu">—</div></div>
+  </div>
+  <div class="spc">
+    <div style="font-size:11.5px;color:var(--muted);margin-bottom:2px">Total alojamiento</div>
+    <div style="font-family:'Playfair Display',serif;font-size:21px;margin:3px 0;font-weight:700" id="mAlojT">—</div>
+    <div class="sbar"><div id="sb1" style="background:var(--ocean);transition:width .4s"></div><div id="sb2" style="background:var(--gold);transition:width .4s"></div></div>
+    <div class="sleg">
+      <div class="si"><div class="sdot" style="background:var(--ocean)"></div><span id="sl1">—</span></div>
+      <div class="si"><div class="sdot" style="background:var(--gold)"></div><span id="sl2">—</span></div>
+    </div>
+  </div>
+
+  <div class="dv">Actividades</div>
+  <div class="tw">
+    <table>
+      <thead><tr><th></th><th>Actividad</th><th>COP total</th><th>x persona</th></tr></thead>
+      <tbody id="tbA"></tbody>
+      <tfoot><tr class="tf"><td></td><td style="font-size:12px">Total actividades</td><td id="tCOP" style="font-size:12px;font-weight:700">—</td><td id="tPP" style="font-size:11px;color:var(--green)">—</td></tr></tfoot>
+    </table>
+  </div>
+
+  <div class="dv">¿Cuánto pone cada quien?</div>
+  <div class="g2">
+    <div class="mc dk"><div class="ml">Gran total</div><div class="mv" id="mGT">—</div><div class="ms" id="mGTu">—</div></div>
+    <div class="mc dk"><div class="ml">Por persona</div><div class="mv" id="mCada">—</div><div class="ms" id="mCadaU">—</div></div>
+  </div>
+  <div class="g3">
+    <div class="mc"><div class="ml">Papás Jorgie</div><div class="mv" id="mG1">—</div><div class="ms">entre 2</div><div class="mu" id="mG1u">—</div></div>
+    <div class="mc"><div class="ml">Papás Gabby</div><div class="mv" id="mG2">—</div><div class="ms">entre 2</div><div class="mu" id="mG2u">—</div></div>
+    <div class="mc"><div class="ml" id="lG3">Gabby</div><div class="mv" id="mG3">—</div><div class="ms">1 persona</div><div class="mu" id="mG3u">—</div></div>
+  </div>
+</div>
+
+<!-- ══ ITINERARIO ══ -->
+<div id="itinerario" class="sec">
+  <div class="agenda" id="agendaRoot"></div>
+</div>
+
+<!-- ══ UBERS ══ -->
+<div id="ubers" class="sec">
+  <div style="background:#FDF3DC;border-left:3px solid var(--gold);border-radius:var(--r2);padding:10px 13px;font-size:12px;line-height:1.6;margin:10px 0 1rem;color:#4A3000">🚗 <strong>Uber XL siempre</strong> — somos 6 en uno. Taxi oficial aeropuerto → Bocagrande: $34.400 por decreto. Madrugada: pedir 10 min antes.</div>
+  <div class="dv">Todos los trayectos</div>
+  <div class="dcards">
+    <div class="dc"><div class="dr">✈️ Aeropuerto → Marbella</div><div class="dd">~7 km · ~15 min · Día 1</div><div class="dp">$45k–55k</div></div>
+    <div class="dc"><div class="dr">🏠 Marbella → Ciudad Amurallada</div><div class="dd">~6 km · noche Día 1</div><div class="dp">$20k–28k</div></div>
+    <div class="dc"><div class="dr">🏠 Marbella → Hotel OZ</div><div class="dd">~6 km · ~12 min · Día 2</div><div class="dp">$35k–45k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Muelle Bodeguita</div><div class="dd">~3.5 km · ~10 min</div><div class="dp">$18k–25k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Getsemaní / Morena</div><div class="dd">~4.5 km · ~12 min</div><div class="dp">$18k–25k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Viva la Vida</div><div class="dd">~4 km · Getsemaní</div><div class="dp">$18k–25k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Castillo San Felipe</div><div class="dd">~4 km · ~10 min</div><div class="dp">$18k–25k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Malecón Bahía Ánimas</div><div class="dd">~4 km · ~10 min</div><div class="dp">$18k–22k</div></div>
+    <div class="dc"><div class="dr">🏄 OZ → El Laguito SUP</div><div class="dd">~900 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
+    <div class="dc"><div class="dr">🍹 OZ → Sky 51</div><div class="dd">~250 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
+    <div class="dc"><div class="dr">🏖️ OZ → Playa / Laguito</div><div class="dd">~200–900 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
+    <div class="dc"><div class="dr">✈️ OZ → Aeropuerto madrugada</div><div class="dd">~7.5 km · ~15 min · Día 6</div><div class="dp">$45k–60k</div></div>
+  </div>
+  <div class="g2">
+    <div class="mc"><div class="ml">Total Ubers estimado</div><div class="mv">~$400k</div><div class="mu">~ USD $114</div></div>
+    <div class="mc"><div class="ml">A pie desde OZ</div><div class="mv" style="font-size:12.5px;line-height:1.5">Playa · Laguito · Sky 51</div><div class="ms" style="color:var(--green)">Bocagrande es caminable ✓</div></div>
+  </div>
+</div>
+
+<!-- ══ FRASES ══ -->
+<div id="frases" class="sec">
+  <div style="background:#FAE5DF;border-left:3px solid var(--coral);border-radius:var(--r2);padding:10px 13px;font-size:12px;line-height:1.6;margin:10px 0 1rem;color:#6B2211">🌴 Frases reales del costeño cartagenero. Con calma, sonrisa y labia — nadie se ofende, todos entienden.</div>
+  <div class="dv">Cerrar tours y actividades</div>
+  <div class="fgrid">
+    <div class="fcard"><div class="ftop"><div class="fico">🎯</div><div><div class="fq">Cerrar el yate o las islas</div><div class="fa">Plata en mano es el argumento más fuerte del muelle.</div></div></div><div class="fsay">"¡Ajá, mi hermano! Somos 6 y el billete está aquí mismo. Nos deja todo por $600.000 y nos vamos pa'l muelle ya mismo, sin cuentos."</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">💰</div><div><div class="fq">Precio muy alto</div><div class="fa">El muelle tiene 20 operadores — ellos lo saben.</div></div></div><div class="fsay">"Erda, parce, ¿me está mamando gallo? Ese tour me lo dan más barato allá. ¿Lo iguala o me voy donde el otro que sí quiere vender?"</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">🚌</div><div><div class="fq">Negociar la chiva</div><div class="fa">Por WhatsApp antes — más poder que cara a cara.</div></div></div><div class="fsay">"Somos 6, es el cumpleaños 30. ¿Qué precio especial nos sale? Pagamos completo ahorita si nos hace el favor."</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">🤫</div><div><div class="fq">Técnica del silencio costeño</div><div class="fa">Proponer el precio y callarse. El primero en hablar, pierde.</div></div></div><div class="fsay">"Le doy $X en efectivo, ya. ¿Cerramos?" — silencio total. Ni mover una ceja.</div></div>
+  </div>
+  <div class="dv">Restaurantes y bares</div>
+  <div class="fgrid">
+    <div class="fcard"><div class="ftop"><div class="fico">🍹</div><div><div class="fq">Bebida muy cara</div><div class="fa">Con sonrisa, nunca bravo.</div></div></div><div class="fsay">"¿Pero cómo así de caro, mi niño? ¿Eso viene con el Caribe adentro? Cobre el real que somos 6 y pedimos pa' rato."</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">🎉</div><div><div class="fq">Pedir detalle de cumpleaños</div><div class="fa">Al reservar, no el día — así preparan algo especial.</div></div></div><div class="fsay">"¿Hacen algo pa' los cumpleaños? Uno del grupo cumple 30 y queremos que sea memorable, ¿me ayuda?"</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">📋</div><div><div class="fq">Suben el precio al pagar</div><div class="fa">Voz tranquila, sin alterarse.</div></div></div><div class="fsay">"Pare, pare. Usted me dijo $X. Eso fue lo que acordamos y eso es lo que se cobra. Sin bololó."</div></div>
+  </div>
+  <div class="dv">Taxis y vendedores</div>
+  <div class="fgrid">
+    <div class="fcard"><div class="ftop"><div class="fico">🚖</div><div><div class="fq">Taxista que cobra de más</div><div class="fa">Tarifa oficial aeropuerto → Bocagrande = $34.400 por decreto.</div></div></div><div class="fsay">"Trate me serio, mano. Aeropuerto a Bocagrande son $34.000 y eso es pa' todo el mundo. Si no, pido el Uber ya mismo."</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">💆</div><div><div class="fq">Vendedor que no suelta</div><div class="fa">Sin mirar, sin enganchar.</div></div></div><div class="fsay">"No, gracias." — sin mirar. Si insisten: "Ya le dije, mi amor." — y mirar al mar.</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">📸</div><div><div class="fq">Foto con palenquera</div><div class="fa">Precio ANTES de posar. Una vez tomada, no hay negociación.</div></div></div><div class="fsay">"¿Cuánto vale la foto, mi reina?" — si no dice número: "Le doy $5.000. ¿Le parece?" — esperar antes de sacar el celular.</div></div>
+  </div>
+  <div style="background:#FDF3DC;border-left:3px solid var(--gold);border-radius:var(--r2);padding:10px 13px;font-size:12px;line-height:1.6;margin-top:1rem;color:#4A3000">🧠 <strong>Regla de oro:</strong> nunca mostrar el billete antes de acordar · nunca pagar más de lo acordado · siempre con sonrisa.</div>
+</div>
+
+<!-- ══ TIPS ══ -->
+<div id="tips" class="sec">
+  <div class="tgrid">
+    <div class="tcard"><div class="tico">📱</div><div class="ttit">Apps esenciales</div><ul class="cl"><li><strong>Uber XL</strong> — los 6 siempre juntos</li><li><strong>InDriver</strong> — tú propones el precio</li><li><strong>Google Maps offline</strong> — descargar antes</li><li><strong>WhatsApp</strong> — reservar todo</li></ul></div>
+    <div class="tcard"><div class="tico">🌊</div><div class="ttit">El Laguito — el mejor rincón</div><div class="tbody">Laguna protegida a 28°C, sin oleaje, aguas cristalinas. Ideal para paddle, fotos y nadar. De noche las luces se reflejan en el agua. A 900m caminando del OZ.</div></div>
+    <div class="tcard"><div class="tico">🏄</div><div class="ttit">Paddle SUP · Sáb 5 Jul</div><div class="tbody">Reservar 3–5 días antes por WhatsApp. Surf 420 y Colombia SUP operan en El Laguito mismo — pedir horario amanecer 5:30am.</div></div>
+    <div class="tcard"><div class="tico">📅</div><div class="ttit">Reservas — hacer YA</div><ul class="cl"><li>Café del Mar — 1 sem · +57 5 664 6515</li><li>Morena Orígenes — 1 sem · Instagram DM</li><li>Viva la Vida — 1 sem · +57 322 725 6479</li><li>Islas + Yate — Kakatua Tours</li><li>Chiva Rumbera — 3 días</li><li>Paddle SUP — 3–5 días · Surf 420</li></ul></div>
+    <div class="tcard"><div class="tico">🎂</div><div class="ttit">Detalles cumple 30</div><ul class="cl"><li>Mencionar al reservar Viva la Vida</li><li>Brindis a bordo del yate el sábado</li><li>Foto en Letras de Cartagena</li><li>Cocada con palenquera — foto icónica</li><li>Foto de cierre en el Laguito</li></ul></div>
+    <div class="tcard"><div class="tico">💵</div><div class="ttit">Plata y pagos</div><div class="tbody">Efectivo en billetes de $5.000 y $10.000. Cajero: Bancolombia en Plaza Bocagrande. No cambiar dólares en la calle.</div></div>
+  </div>
+</div>
+
+</div><!-- .main -->
+<div class="footer">Hecho con ❤️ para el cumpleaños 30 de <span id="fNf">Jorgie</span> · Cartagena · 1–6 Jul 2025</div>
+
+<!-- FAB -->
+<button class="fab" onclick="openSheet()" title="Ajustes">⚙️</button>
+
+<!-- SHEET AJUSTES -->
+<div class="sheet-bg" id="sheetBg" onclick="if(event.target===this)closeSheet()">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">Ajustes del plan</div>
+    <div class="sheet-sub">Edita nombres, montos y actividades</div>
+    <div class="ssec">Datos generales</div>
+    <div class="sfield"><label>Nombre del cumpleañero</label><input id="fN3" value="Jorgie"></div>
+    <div class="sfield"><label>Nombre de quien organiza</label><input id="fG" value="Gabby"></div>
+    <div class="s2">
+      <div class="sfield"><label>Fecha llegada</label><input id="fF1" value="1 Jul 2025"></div>
+      <div class="sfield"><label>Fecha regreso</label><input id="fF2" value="6 Jul 2025"></div>
+    </div>
+    <div class="s2">
+      <div class="sfield"><label>Personas que pagan</label><input type="number" id="fP" value="5" min="1"></div>
+      <div class="sfield"><label>Tasa COP/USD</label><input type="number" id="fT" value="3500"></div>
+    </div>
+    <div class="ssec">Alojamiento (ya pagado)</div>
+    <div class="s2">
+      <div class="sfield"><label>Hotel OZ (COP)</label><input type="number" id="fH" value="5500000"></div>
+      <div class="sfield"><label>Airbnb (COP)</label><input type="number" id="fA" value="530000"></div>
+    </div>
+    <div class="sfield"><label>Aporte papás de Jorgie en alojamiento (COP)</label><input type="number" id="fS" value="2623000"></div>
+    <div class="ssec">Actividades</div>
+    <div id="fActs"></div>
+    <div class="add-row">
+      <input id="newActN" placeholder="Nueva actividad" type="text">
+      <input id="newActV" placeholder="COP" type="number" style="max-width:90px">
+      <button onclick="addAct()">➕</button>
+    </div>
+    <button class="sheet-save" onclick="applySheet()">Guardar cambios ✓</button>
+  </div>
+</div>
+
+<!-- SHEET EDITAR EVENTO -->
+<div class="evsheet-bg" id="evBg" onclick="if(event.target===this)closeEvSheet()">
+  <div class="evsheet">
+    <div class="evsheet-handle"></div>
+    <div class="evsheet-title">Editar evento</div>
+    <div class="ev2">
+      <div class="evfield"><label>Hora</label><input id="ev_time" placeholder="ej. 9:00a"></div>
+      <div class="evfield"><label>Emoji</label><input id="ev_icon" placeholder="🏖️" style="font-size:18px"></div>
+    </div>
+    <div class="evfield"><label>Nombre del evento</label><input id="ev_name" placeholder="Nombre"></div>
+    <div class="evfield"><label>Descripción</label><input id="ev_desc" placeholder="Descripción breve"></div>
+    <div class="ev2">
+      <div class="evfield"><label>Precio (ej. $45k)</label><input id="ev_price" placeholder="$0"></div>
+      <div class="evfield"><label>Nota precio</label><input id="ev_sub" placeholder="/persona · free · etc"></div>
+    </div>
+    <div class="evbtns">
+      <button class="ev-save" onclick="saveEv()">Guardar</button>
+      <button class="ev-del" onclick="delEv()">🗑 Borrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ARA POPUP -->
+<div class="ara-bg" id="araBg" onclick="if(event.target===this)closeAra()">
+  <div class="ara-sheet">
+    <div class="ara-handle"></div>
+    <div class="ara-ttl">🛒 Ara Bocagrande</div>
+    <div class="ara-sub2">5 min caminando del OZ · C.C. Plaza Bocagrande</div>
+    <div class="ara-hdr"><div>Producto</div><div>Ara 💚</div><div>Playa 🔴</div></div>
+    <div class="ara-item"><div class="ara-prod">Agua 600ml</div><div class="ara-ara">$1.500</div><div class="ara-playa">$5.000–6k</div></div>
+    <div class="ara-item"><div class="ara-prod">Cerveza lata</div><div class="ara-ara">$3.200</div><div class="ara-playa">$8.000–12k</div></div>
+    <div class="ara-item"><div class="ara-prod">Gatorade</div><div class="ara-ara">$3.500</div><div class="ara-playa">$7.000–9k</div></div>
+    <div class="ara-item"><div class="ara-prod">Papas fritas</div><div class="ara-ara">$2.500</div><div class="ara-playa">$6.000–8k</div></div>
+    <div class="ara-item"><div class="ara-prod">Gaseosa 400ml</div><div class="ara-ara">$2.000</div><div class="ara-playa">$5.000–7k</div></div>
+    <div class="ara-nota">💡 6 aguas + 6 cervezas + snacks en Ara = ~$50.000. Lo mismo en playa = ~$180.000. <strong>Ahorras $130.000 cada día de playa.</strong></div>
+    <div class="ara-tip"><strong>Llevar:</strong> bebidas de Ara · snacks · bolsas ziplock pa' los celulares · efectivo suelto · gafas · sombrero<br><br><strong>Evitar:</strong> masajes ambulantes (terminan carísimos) · mariscos sin refrigeración · fotos con palenqueras sin acordar precio antes</div>
+    <button class="ara-close" onclick="closeAra()">Cerrar</button>
+  </div>
+</div>
+
+<script>
+// ═══ COSTOS DATA ═══
+const D={
+  nombre:'Jorgie',gabby:'Gabby',fecha1:'1 Jul 2025',fecha2:'6 Jul 2025',
+  pagadores:5,tasa:3500,hotel:5500000,airbnb:530000,suegros:2623000,
+  acts:[
+    {n:'Uber XL aeropuerto→Marbella',v:50000,on:true},
+    {n:'Uber XL Marbella→Hotel OZ',v:40000,on:true},
+    {n:'Tour Islas del Rosario',v:780000,on:true},
+    {n:'Yate atardecer · barra abierta',v:780000,on:true},
+    {n:'Paddle SUP · El Laguito',v:600000,on:true},
+    {n:'Chiva Rumbera Nocturna',v:600000,on:true},
+    {n:'Sky 51 Bar (entrada + cócteles)',v:660000,on:true},
+    {n:'Viva la Vida · cena cumpleaños',v:780000,on:true},
+    {n:'Pietrasanta Wine Window',v:210000,on:true},
+    {n:'Morena Orígenes',v:540000,on:true},
+    {n:'El Sombrerón + ceviches aeropuerto',v:300000,on:true},
+    {n:'Castillo San Felipe (entrada + guía)',v:210000,on:true},
+    {n:'Calle Tripita y Media (almuerzos)',v:200000,on:true},
+    {n:'Compras Ara (snacks + bebidas)',v:80000,on:true},
+    {n:'Ubers internos',v:300000,on:true},
+    {n:'Ubers aeropuerto regreso (×2)',v:100000,on:true},
+  ]
+};
+
+// ═══ ITINERARIO DATA ═══
+const DAYS=[
+  {num:1,fecha:'Martes 1 Jul · Llegada',tit:'Marbella · Ciudad Amurallada · Ceviches',
+   badges:[{t:'✈️ 2:05p · 4:40p',c:''},{t:'🌃 Ciudad amurallada',c:'g'}],
+   evs:[
+    {t:'2:05p',i:'✈️',n:'Papás de Jorgie aterrizan',d:'Vuelo internacional desde LA · esperan a los demás',p:'',s:''},
+    {t:'2:30p',i:'🐟',n:'Ceviches frente al aeropuerto',d:'Puesto callejero · pescado y camarón frescos · mientras esperan a Jorgie y los demás',p:'~$38k',s:'USD $11'},
+    {t:'4:40p',i:'✈️',n:'Jorgie + Gabby + papás de Gabby aterrizan',d:'Vuelo nacional · todos se reúnen por primera vez 🎉',p:'',s:''},
+    {t:'5:15p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Los 6 juntos · ~7 km · ~15 min',p:'$45k–55k',s:''},
+    {t:'7:00p',i:'🚗',n:'Uber XL → Ciudad Amurallada',d:'~6 km desde Marbella',p:'~$22k',s:''},
+    {t:'7:15p',i:'🌃',n:'Caminata nocturna · Ciudad Amurallada',d:'Torre del Reloj · Plaza Santo Domingo · murallas iluminadas · músicos en cada esquina',p:'Gratis',s:'fr'},
+    {t:'8:30p',i:'🍷',n:'Pietrasanta Wine Window',d:'Copas por una ventana en la muralla · Mar–Dom hasta 10pm',p:'$25k–40k',s:'/copa'},
+    {t:'9:30p',i:'🌺',n:'Getsemaní de noche',d:'Arte urbano · bares locales · cumbia en las calles',p:'Gratis',s:'fr'},
+   ],extras:[]},
+  {num:2,fecha:'Miércoles 2 Jul',tit:'Check-in OZ · Islas del Rosario · Laguito noche',
+   badges:[{t:'🏨 Hotel OZ',c:''},{t:'🐠 Islas',c:'g'},{t:'🌊 Laguito noche',c:''}],
+   evs:[
+    {t:'7:00a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ',d:'Dejar maletas · desayuno buffet incluido',p:'$35k–45k',s:''},
+    {t:'7:30a',i:'🥐',n:'Desayuno buffet · Hotel OZ',d:'Incluido · check-in habitaciones después de las 3pm',p:'Incluido',s:'fr'},
+    {t:'9:00a',i:'🚗',n:'Uber XL → Muelle La Bodeguita',d:'~3.5 km · ~10 min · puerta 1',p:'$18k–25k',s:''},
+    {t:'9:30a',i:'🐠',n:'Tour Islas del Rosario · día completo',d:'Snorkel · aguas turquesas · almuerzo mariscos incluido · regreso ~5pm',p:'$130k–275k',s:'/persona'},
+    {t:'5:30p',i:'🏨',n:'Check-in habitaciones · Hotel OZ',d:'Ducha · piscina rooftop · vista al Caribe',p:'',s:''},
+    {t:'9:00p',i:'🌊',n:'Caminata nocturna · El Laguito',d:'Bordear la laguna · luces reflejadas en el agua · helados · ambiente exclusivo',p:'Gratis',s:'fr'},
+    {t:'10:30p',i:'🌺',n:'Morena Orígenes · Getsemaní',d:'Show en vivo · bailarines · cocina colombiana · el más instagrameable · reservar',p:'$80k–100k',s:'/persona'},
+   ],
+   extras:[
+    {type:'ops',label:'Comparar — Islas del Rosario',items:[
+      {n:'Kakatua Tours',best:true,d:'Lancha privada · grupos pequeños · almuerzo incluido',l:'https://www.kakatuatours.com/',p:'~$130k',pp:'/persona'},
+      {n:'Tour por el Caribe',best:false,d:'5 islas + Playa Blanca + opción plancton nocturno',l:'https://tourporelcaribe.com/en/product/tour-5-islas-del-rosario-desde-cartagena/',p:'$275k',pp:'+ plancton'},
+      {n:'Nómades · Muelle Bodeguita',best:false,d:'Tour compartido · 5 islas + Barú · cancelación 48h',l:'https://www.nomades.com/en/cartagena/5-islands-rosario-baru-id1737',p:'$275k',pp:'sin bebidas'},
+    ]},
+    {type:'lugar',i:'🌺',n:'Morena Orígenes',s:'Getsemaní · siempre lleno en julio',l:'https://www.instagram.com/morenaorigenes/',lt:'@morenaorigenes ↗',b:'w',bt:'⚠️ 1 sem antes'},
+   ]},
+  {num:3,fecha:'Jueves 3 Jul 🎂 CUMPLEAÑOS',tit:'Playa tranquila · Viva la Vida · Sky 51',
+   badges:[{t:'🎂 El gran día',c:'r'},{t:'⭐ Cena rooftop',c:'y'},{t:'🍹 Sky 51',c:'g'}],
+   evs:[
+    {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel · el día arranca relajado',p:'Incluido',s:'fr'},
+    {t:'9:00a',i:'🏖️',n:'Playa El Laguito · mañana tranquila',d:'La zona más exclusiva · a pie desde el hotel · sin afán',p:'$0',s:'fr'},
+    {t:'1:00p',i:'🍽️',n:'Almuerzo tranquilo · Bocagrande',d:'Restaurante local · a gusto del grupo',p:'~$25k–50k',s:'/persona'},
+    {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar fresco y elegante',p:'',s:''},
+    {t:'7:30p',i:'⭐',n:'Cena cumpleaños · Viva la Vida Rooftop',d:'Chef Michelin · fusión japonesa-caribeña · vista a la bahía · Getsemaní',p:'$80k–130k',s:'/persona'},
+    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · cerrar el cumpleaños arriba',d:'Piso 51 · 202m · piscina infinita · DJ · ~10 min Uber desde Getsemaní',p:'$60k+',s:'entrada+cócteles'},
+   ],
+   extras:[
+    {type:'ara'},
+    {type:'lugar',i:'⭐',n:'Viva la Vida · Rooftop',s:'Cl. 24 #8A-344, Getsemaní · chef Michelin · reservar',l:'https://www.vivalavidactg.com/',lt:'vivalavidactg.com ↗',b:'w',bt:'📞 322 725 6479'},
+    {type:'lugar',i:'🍹',n:'Sky 51 Bar',s:'A pie 250m del OZ · sin reserva · llegar antes de las 11pm',l:'https://www.51skybar.com/',lt:'51skybar.com ↗',b:'ok',bt:'Sin reserva'},
+   ]},
+  {num:4,fecha:'Viernes 4 Jul',tit:'Castillo San Felipe · Ceviches · Chiva Rumbera',
+   badges:[{t:'🏰 Historia',c:''},{t:'🚌 Chiva rumbera',c:'g'}],
+   evs:[
+    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
+    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
+    {t:'12:00p',i:'🌮',n:'Calle Tripita y Media · almuerzo local',d:'Getsemaní · ajiaco · mote de queso · sancocho desde $8.000',p:'$8k–18k',s:''},
+    {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $15k',s:''},
+    {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · atardecer',d:'Vista panorámica a la bahía y murallas históricas',p:'Gratis',s:'fr'},
+    {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad',p:'$90k–110k',s:'/persona'},
+   ],
+   extras:[
+    {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
+   ]},
+  {num:5,fecha:'Sábado 5 Jul',tit:'Paddle SUP amanecer · Playa · Yate atardecer',
+   badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌅 Despedida',c:''}],
+   evs:[
+    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas y cristalinas · 28°C · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
+    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
+    {t:'9:00a',i:'🏖️',n:'Última mañana de playa · El Laguito',d:'A pie desde el hotel · último día de Caribe · sin afán',p:'$0',s:'fr'},
+    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
+    {t:'7:30p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
+    {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia · el cierre perfecto',p:'$0',s:'fr'},
+   ],
+   extras:[
+    {type:'ara'},
+    {type:'ops',label:'Comparar — Paddle SUP',items:[
+      {n:'Surf 420 · El Laguito',best:true,d:'Punto exacto · tablas iSUP premium · amanecer · reservar WhatsApp 3–5 días',l:'https://cartagenasurf420.com/en/paddleboard/',p:'~$80k',pp:'1h · guía'},
+      {n:'Colombia SUP · El Laguito',best:false,d:'También en El Laguito · tours LED nocturnos · buenas reseñas',l:'',p:'~$85k',pp:'1h'},
+      {n:'Kakatua Tours · alternativa',best:false,d:'Bahía Castillogrande si El Laguito está lleno',l:'https://www.kakatuatours.com/',p:'Cotizar',pp:'grupo'},
+    ]},
+   ]},
+  {num:6,fecha:'Domingo 6 Jul · Regreso',tit:'Vuelos separados · misión cumplida ❤️',
+   badges:[{t:'✈️ 7:30am nacional',c:''},{t:'✈️ 9:45am internacional',c:''}],
+   evs:[
+    {t:'4:45a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 2h antes · ~15 min madrugada',p:'$45k–55k',s:''},
+    {t:'5:30a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.5h antes',p:'$45k–55k',s:''},
+    {t:'7:30a',i:'✈️',n:'Vuelo nacional sale',d:'Jorgie · Gabby · papás de Gabby',p:'',s:''},
+    {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️',p:'',s:''},
+   ],extras:[]}
+];
+
+// estado editor de evento
+let evCtx={di:null,ei:null};
+
+// ═══ RENDER AGENDA ═══
+function renderAgenda(){
+  const root=document.getElementById('agendaRoot');
+  root.innerHTML='';
+  DAYS.forEach((day,di)=>{
+    const el=document.createElement('div');
+    el.className='aday'+(di===0?' open':'');
+    el.id='day'+di;
+    const bHTML=day.badges.map(b=>`<span class="db ${b.c}">${b.t}</span>`).join('');
+    el.innerHTML=`
+      <div class="dhdr" onclick="toggleDay(${di})">
+        <div class="dnum">${day.num}</div>
+        <div class="dinfo">
+          <div class="dfecha">${day.fecha}</div>
+          <div class="dtit">${day.tit}</div>
+          <div class="dbadges">${bHTML}</div>
+        </div>
+        <div class="darrow">▾</div>
+      </div>
+      <div class="dbody" id="dbody${di}"></div>`;
+    root.appendChild(el);
+    renderDayBody(di);
+  });
+}
+
+function renderDayBody(di){
+  const day=DAYS[di];
+  const body=document.getElementById('dbody'+di);
+  let html='';
+  // Eventos
+  day.evs.forEach((ev,ei)=>{
+    const pClass=ev.s==='fr'?' fr':'';
+    const pHTML=ev.p?`<div class="eprice${pClass}">${ev.p}${ev.s&&ev.s!=='fr'?' <span style="font-size:9.5px;color:var(--muted);font-weight:400">'+ev.s+'</span>':''}</div>`:'';
+    html+=`<div class="ev" onclick="openEvSheet(${di},${ei})">
+      <div class="etime">${ev.t}</div>
+      <div class="eico">${ev.i}</div>
+      <div class="ebody">
+        <div class="ename">${ev.n}</div>
+        <div class="edesc">${ev.d}</div>
+        ${pHTML}
+      </div>
+    </div>`;
+  });
+  // Extras
+  (day.extras||[]).forEach(ex=>{
+    if(ex.type==='ops'){
+      html+=`<div class="ops"><div class="opshdr">${ex.label}</div>`;
+      ex.items.forEach(op=>{
+        html+=`<div class="oprow"><div>
+          <div class="opname">${op.n}${op.best?'<span class="opbest">✓ Recomendado</span>':''}</div>
+          <div class="opdesc">${op.d}</div>
+          ${op.l?`<a href="${op.l}" target="_blank" class="oplink">${op.l.replace('https://','').replace(/\/.*$/,'')} ↗</a>`:''}
+        </div><div><div class="opprice">${op.p}</div><div class="oppp">${op.pp}</div></div></div>`;
+      });
+      html+=`</div>`;
+    } else if(ex.type==='lugar'){
+      html+=`<div class="lstrip">
+        <div class="lico">${ex.i}</div>
+        <div><div class="lname">${ex.n}</div><div class="lsub">${ex.s}</div>${ex.l?`<a href="${ex.l}" target="_blank" class="llink">${ex.lt}</a>`:''}</div>
+        <div><span class="lbadge ${ex.b==='ok'?'ok':'w'}">${ex.bt}</span></div>
+      </div>`;
+    } else if(ex.type==='ara'){
+      html+=`<button class="ara-btn" onclick="event.stopPropagation();openAra()">🛒 Guía Ara — qué llevar a la playa</button>`;
+    }
+  });
+  // Add event
+  html+=`<button class="addEv-btn" onclick="addEv(${di})">➕ Agregar evento al día ${day.num}</button>`;
+  body.innerHTML=html;
+}
+
+function toggleDay(di){document.getElementById('day'+di).classList.toggle('open');}
+
+// ═══ EDITOR EVENTO ═══
+function openEvSheet(di,ei){
+  evCtx={di,ei};
+  const ev=DAYS[di].evs[ei];
+  document.getElementById('ev_time').value=ev.t;
+  document.getElementById('ev_icon').value=ev.i;
+  document.getElementById('ev_name').value=ev.n;
+  document.getElementById('ev_desc').value=ev.d;
+  document.getElementById('ev_price').value=ev.p;
+  document.getElementById('ev_sub').value=ev.s==='fr'?'free':ev.s;
+  document.getElementById('evBg').classList.add('on');
+}
+function closeEvSheet(){document.getElementById('evBg').classList.remove('on');}
+function saveEv(){
+  const {di,ei}=evCtx;
+  if(di===null)return;
+  const g=id=>document.getElementById(id).value.trim();
+  DAYS[di].evs[ei]={t:g('ev_time')||DAYS[di].evs[ei].t,i:g('ev_icon')||DAYS[di].evs[ei].i,n:g('ev_name')||DAYS[di].evs[ei].n,d:g('ev_desc'),p:g('ev_price'),s:g('ev_sub')};
+  closeEvSheet();renderDayBody(di);
+}
+function delEv(){
+  const {di,ei}=evCtx;
+  if(di===null)return;
+  if(confirm('¿Borrar este evento?')){DAYS[di].evs.splice(ei,1);closeEvSheet();renderDayBody(di);}
+}
+function addEv(di){
+  DAYS[di].evs.push({t:'00:00',i:'📌',n:'Nuevo evento',d:'Toca para editar',p:'',s:''});
+  renderDayBody(di);
+  setTimeout(()=>openEvSheet(di,DAYS[di].evs.length-1),80);
+}
+
+// ═══ ARA ═══
+function openAra(){document.getElementById('araBg').classList.add('on');}
+function closeAra(){document.getElementById('araBg').classList.remove('on');}
+
+// ═══ SHEET AJUSTES ═══
+function openSheet(){
+  document.getElementById('fN3').value=D.nombre;
+  document.getElementById('fG').value=D.gabby;
+  document.getElementById('fF1').value=D.fecha1;
+  document.getElementById('fF2').value=D.fecha2;
+  document.getElementById('fP').value=D.pagadores;
+  document.getElementById('fT').value=D.tasa;
+  document.getElementById('fH').value=D.hotel;
+  document.getElementById('fA').value=D.airbnb;
+  document.getElementById('fS').value=D.suegros;
+  buildActsModal();
+  document.getElementById('sheetBg').classList.add('on');
+}
+function closeSheet(){document.getElementById('sheetBg').classList.remove('on');}
+function buildActsModal(){
+  const c=document.getElementById('fActs');c.innerHTML='';
+  D.acts.forEach((a,i)=>{
+    const r=document.createElement('div');r.className='act-row-m';
+    r.innerHTML=`<input type="text" id="ma_n${i}" value="${a.n}"><input type="number" id="ma_v${i}" value="${a.v}"><button class="adel" onclick="delActM(${i})">🗑</button>`;
+    c.appendChild(r);
+  });
+}
+function delActM(i){D.acts.splice(i,1);buildActsModal();}
+function addAct(){
+  const n=document.getElementById('newActN').value.trim();
+  const v=parseInt(document.getElementById('newActV').value)||0;
+  if(!n){document.getElementById('newActN').focus();return;}
+  D.acts.push({n,v,on:true});
+  document.getElementById('newActN').value='';document.getElementById('newActV').value='';
+  buildActsModal();
+}
+function applySheet(){
+  D.nombre=document.getElementById('fN3').value||'Jorgie';
+  D.gabby=document.getElementById('fG').value||'Gabby';
+  D.fecha1=document.getElementById('fF1').value;
+  D.fecha2=document.getElementById('fF2').value;
+  D.pagadores=parseInt(document.getElementById('fP').value)||5;
+  D.tasa=parseInt(document.getElementById('fT').value)||3500;
+  D.hotel=parseInt(document.getElementById('fH').value)||5500000;
+  D.airbnb=parseInt(document.getElementById('fA').value)||530000;
+  D.suegros=parseInt(document.getElementById('fS').value)||2623000;
+  D.acts.forEach((a,i)=>{
+    const nm=document.getElementById('ma_n'+i),vl=document.getElementById('ma_v'+i);
+    if(nm&&nm.value.trim())a.n=nm.value.trim();
+    if(vl){const v=parseInt(vl.value);if(!isNaN(v)&&v>=0)a.v=v;}
+  });
+  closeSheet();renderAll();
+}
+
+// ═══ RENDER COSTOS ═══
+const f=n=>'$'+Math.round(n).toLocaleString('es-CO');
+const u=n=>'USD $'+Math.round(n/D.tasa).toLocaleString('es-CO');
+function renderCostos(){
+  ['hN','fNf'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=D.nombre;});
+  const lG3=document.getElementById('lG3');if(lG3)lG3.textContent=D.gabby;
+  document.getElementById('hF').textContent=D.fecha1+' – '+D.fecha2;
+  document.getElementById('hT').textContent='$'+D.tasa.toLocaleString('es-CO')+'/USD';
+  const aloj=D.hotel+D.airbnb,nosAloj=aloj-D.suegros;
+  document.getElementById('mH').textContent=f(D.hotel);document.getElementById('mHu').textContent='~'+u(D.hotel);
+  document.getElementById('mA').textContent=f(D.airbnb);document.getElementById('mAu').textContent='~'+u(D.airbnb);
+  document.getElementById('mAlojT').textContent=f(aloj);
+  const pct=Math.round(D.suegros/aloj*100);
+  document.getElementById('sb1').style.width=pct+'%';document.getElementById('sb2').style.width=(100-pct)+'%';
+  document.getElementById('sl1').textContent='Papás de Jorgie: '+f(D.suegros)+' ('+pct+'%)';
+  document.getElementById('sl2').textContent='Tu grupo: '+f(nosAloj)+' ('+(100-pct)+'%)';
+  const tb=document.getElementById('tbA');tb.innerHTML='';let tot=0;
+  D.acts.forEach((a,i)=>{
+    if(a.on)tot+=a.v;
+    const pp=a.on?f(Math.round(a.v/D.pagadores)):'-';
+    const tr=document.createElement('tr');
+    tr.className=a.on?'':'act-off';
+    tr.innerHTML=`<td><button class="tog${a.on?' on':''}" onclick="toggleAct(${i})"></button></td>
+      <td style="font-size:11.5px">${a.n}</td>
+      <td style="font-weight:600">${a.on?f(a.v):'—'}</td>
+      <td style="font-size:10.5px;color:var(--green)">${pp}</td>`;
+    tb.appendChild(tr);
+  });
+  document.getElementById('tCOP').textContent=f(tot);
+  document.getElementById('tPP').textContent=f(Math.round(tot/D.pagadores))+'/pers';
+  const gran=aloj+tot,cada=Math.round(gran/D.pagadores);
+  document.getElementById('mGT').textContent=f(gran);document.getElementById('mGTu').textContent='~'+u(gran);
+  document.getElementById('mCada').textContent=f(cada);document.getElementById('mCadaU').textContent='~'+u(cada)+' por persona';
+  document.getElementById('mG1').textContent=f(cada*2);document.getElementById('mG1u').textContent='~'+u(cada*2);
+  document.getElementById('mG2').textContent=f(cada*2);document.getElementById('mG2u').textContent='~'+u(cada*2);
+  document.getElementById('mG3').textContent=f(cada);document.getElementById('mG3u').textContent='~'+u(cada);
+}
+function toggleAct(i){D.acts[i].on=!D.acts[i].on;renderCostos();}
+
+// ═══ TABS ═══
+function show(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderAll(){renderCostos();renderAgenda();}
+renderAll();
+</script>
+</body>
+</html>

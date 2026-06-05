@@ -452,8 +452,6 @@ const D={
   nombre:'Jorgie',gabby:'Gabby',fecha1:'1 Jul 2025',fecha2:'6 Jul 2025',
   pagadores:5,tasa:3500,hotel:5500000,airbnb:530000,suegros:2623000,
   acts:[
-    {n:'Uber XL aeropuerto→Marbella',v:60000,on:true},
-    {n:'Uber XL Marbella→Hotel OZ',v:50000,on:true},
     {n:'Tour Islas del Rosario',v:500000,on:true},
     {n:'Yate atardecer · barra abierta',v:450000,on:true},
     {n:'Paddle SUP · El Laguito',v:120000,on:true},
@@ -461,13 +459,7 @@ const D={
     {n:'Sky 51 Bar (entrada + cócteles)',v:500000,on:true},
     {n:'Viva la Vida · cena cumpleaños',v:500000,on:true},
     {n:'Pietrasanta Wine Window',v:100000,on:true},
-    {n:'Morena Orígenes',v:100000,on:true},
-    {n:'El Sombrerón + ceviches aeropuerto',v:100000,on:true},
-    {n:'Castillo San Felipe (entrada + guía)',v:130000,on:true},
-    {n:'Calle Tripita y Media (almuerzos)',v:150000,on:true},
-    {n:'Compras Ara (snacks + bebidas)',v:150000,on:true},
-    {n:'Ubers internos',v:200000,on:true},
-    {n:'Ubers aeropuerto regreso (×2)',v:80000,on:true},
+    {n:'El Sombrerón ceviches',v:100000,on:true},
   ]
 };
 
@@ -502,17 +494,16 @@ const DAYS=[
       {n:'Tour por el Caribe',best:false,d:'5 islas + Playa Blanca + opción plancton nocturno',l:'https://tourporelcaribe.com/en/product/tour-5-islas-del-rosario-desde-cartagena/',p:'$275k',pp:'+ plancton'},
       {n:'Nómades · Muelle Bodeguita',best:false,d:'Tour compartido · 5 islas + Barú · cancelación 48h',l:'https://www.nomades.com/en/cartagena/5-islands-rosario-baru-id1737',p:'$275k',pp:'sin bebidas'},
     ]},
-    {type:'lugar',i:'🌺',n:'Morena Orígenes',s:'Getsemaní · siempre lleno en julio',l:'https://www.instagram.com/morenaorigenes/',lt:'@morenaorigenes ↗',b:'w',bt:'⚠️ 1 sem antes'},
    ]},
   {num:3,fecha:'Jueves 3 Jul 🎂 CUMPLEAÑOS',tit:'Playa tranquila · Viva la Vida · Sky 51',
    badges:[{t:'🎂 El gran día',c:'r'},{t:'⭐ Cena rooftop',c:'y'},{t:'🍹 Sky 51',c:'g'}],
    evs:[
-    {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel · el día arranca relajado',p:'Incluido',s:'fr'},
+    {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel ',p:'Incluido',s:'fr'},
     {t:'9:00a',i:'🏖️',n:'Playa El Laguito · mañana tranquila',d:'La zona más exclusiva · a pie desde el hotel · sin afán',p:'$0',s:'fr'},
     {t:'1:00p',i:'🍽️',n:'Almuerzo tranquilo · Bocagrande',d:'Restaurante local · a gusto del grupo',p:'~$25k–50k',s:'/persona'},
-    {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar fresco y elegante',p:'',s:''},
+    {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar lindo y elegante a sus 30',p:'',s:''},
     {t:'7:30p',i:'⭐',n:'Cena cumpleaños · Viva la Vida Rooftop',d:'Chef Michelin · fusión japonesa-caribeña · vista a la bahía · Getsemaní',p:'$80k–130k',s:'/persona'},
-    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · cerrar el cumpleaños arriba',d:'Piso 51 · 202m · piscina infinita · DJ · ~10 min Uber desde Getsemaní',p:'$60k+',s:'entrada+cócteles'},
+    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · Finalizar cumpleaños arriba',d:'Piso 51 · 202m · piscina infinita · DJ · ~10 min Uber desde Getsemaní',p:'$60k+',s:'entrada+cócteles'},
    ],
    extras:[
     {type:'ara'},
@@ -523,24 +514,24 @@ const DAYS=[
    badges:[{t:'🏰 Historia',c:''},{t:'🚌 Chiva rumbera',c:'g'}],
    evs:[
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
+    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza más grande de América ',p:'$25k/pers',s:'+$20k guía'},
     {t:'12:00p',i:'🌮',n:'Calle Tripita y Media · almuerzo local',d:'Getsemaní · ajiaco · mote de queso · sancocho desde $8.000',p:'$8k–18k',s:''},
-    {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $15k',s:''},
+    {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $20k',s:''},
     {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · atardecer',d:'Vista panorámica a la bahía y murallas históricas',p:'Gratis',s:'fr'},
     {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad',p:'$90k–110k',s:'/persona'},
    ],
    extras:[
-    {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
+    {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo ',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
    ]},
   {num:5,fecha:'Sábado 5 Jul',tit:'Paddle SUP amanecer · Playa · Yate atardecer',
    badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌅 Despedida',c:''}],
    evs:[
     {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas y cristalinas · 28°C · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'9:00a',i:'🏖️',n:'Última mañana de playa · El Laguito',d:'A pie desde el hotel · último día de Caribe · sin afán',p:'$0',s:'fr'},
-    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
+    {t:'9:00a',i:'🏖️',n:'Última mañana de playa · El Laguito',d:'A pie desde el hotel · último día de Caribe ',p:'$0',s:'fr'},
+    {t:'4:30p',i:'🛥️',n:'Yate al atardecer',d:'90 min · barra abierta · Kakatua Tours',p:'$120k–150k',s:'/persona'},
     {t:'7:30p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
-    {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia · el cierre perfecto',p:'$0',s:'fr'},
+    {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia',p:'$0',s:'fr'},
    ],
    extras:[
     {type:'ara'},
@@ -553,10 +544,10 @@ const DAYS=[
   {num:6,fecha:'Domingo 6 Jul · Regreso',tit:'Vuelos separados · misión cumplida ❤️',
    badges:[{t:'✈️ 7:30am nacional',c:''},{t:'✈️ 9:45am internacional',c:''}],
    evs:[
-    {t:'4:45a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 2h antes · ~15 min madrugada',p:'$45k–55k',s:''},
-    {t:'5:30a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.5h antes',p:'$45k–55k',s:''},
+    {t:'5:50a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 3h antes · ~15 min madrugada',p:'$45k–55k',s:''},
+    {t:'5:50a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.5h antes',p:'$45k–55k',s:''},
     {t:'7:30a',i:'✈️',n:'Vuelo nacional sale',d:'Jorgie · Gabby · papás de Gabby',p:'',s:''},
-    {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️',p:'',s:''},
+    {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️ Gracias a todos mis chicos',p:'',s:''},
    ],extras:[]}
 ];
 

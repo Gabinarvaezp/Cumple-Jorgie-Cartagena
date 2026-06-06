@@ -729,7 +729,7 @@ function renderCostos(){
   const pct=Math.round(D.suegros/aloj*100);
   document.getElementById('sb1').style.width=pct+'%';document.getElementById('sb2').style.width=(100-pct)+'%';
   document.getElementById('sl1').textContent='Papás de Jorgie: '+f(D.suegros)+' ('+pct+'%)';
-  document.getElementById('sl2').textContent='Papás de Gabyy y Gabby: '+f(nosAloj)+' ('+(100-pct)+'%)';
+  document.getElementById('sl2').textContent='Papás de Gabi y Gabby: '+f(nosAloj)+' ('+(100-pct)+'%)';
   const tb=document.getElementById('tbA');tb.innerHTML='';let tot=0;
   D.acts.forEach((a,i)=>{
     if(a.on)tot+=a.v;

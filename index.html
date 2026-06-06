@@ -14,7 +14,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{font-size:16px}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--deep);min-height:100vh;overflow-x:hidden}
+body{font-family:'Cormorant Garamond',sans-serif;background:var(--bg);color:var(--deep);min-height:100vh;overflow-x:hidden}
 
 .hero{background:var(--deep);color:#fff;padding:2rem 1.25rem 3.2rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,rgba(40,160,190,.28) 0%,transparent 60%)}
@@ -255,7 +255,7 @@ tr:last-child td{border-bottom:none}
 
 <!-- COSTOS -->
 <div id="costos" class="sec on">
-  <div class="dv">Alojamiento — ya pagado</div>
+  <div class="dv">Alojamiento — ✅ ya pagado, no se divide</div>
   <div class="g2">
     <div class="mc"><div class="ml">Hotel OZ Collection</div><div class="mv" id="mH">—</div><div class="mu" id="mHu">—</div></div>
     <div class="mc"><div class="ml">Airbnb Marbella</div><div class="mv" id="mA">—</div><div class="mu" id="mAu">—</div></div>
@@ -269,7 +269,7 @@ tr:last-child td{border-bottom:none}
       <div class="si"><div class="sdot" style="background:var(--gold)"></div><span id="sl2">—</span></div>
     </div>
   </div>
-  <div class="dv">Actividades</div>
+  <div class="dv">Actividades — lo que queda por pagar y dividir</div>
   <div class="tw">
     <table>
       <thead><tr><th></th><th>Actividad</th><th>COP total</th><th>x persona</th></tr></thead>
@@ -277,15 +277,18 @@ tr:last-child td{border-bottom:none}
       <tfoot><tr class="tf"><td></td><td style="font-size:12px">Total actividades</td><td id="tCOP" style="font-size:12px;font-weight:700">—</td><td id="tPP" style="font-size:11px;color:var(--green)">—</td></tr></tfoot>
     </table>
   </div>
-  <div class="dv">¿Cuánto pone cada quien?</div>
+  <div class="dv">Actividades — queda por pagar</div>
   <div class="g2">
-    <div class="mc dk"><div class="ml">Gran total</div><div class="mv" id="mGT">—</div><div class="ms" id="mGTu">—</div></div>
-    <div class="mc dk"><div class="ml">Por persona</div><div class="mv" id="mCada">—</div><div class="ms" id="mCadaU">—</div></div>
+    <div class="mc dk"><div class="ml">Total actividades</div><div class="mv" id="mGT">—</div><div class="ms" id="mGTu">—</div></div>
+    <div class="mc dk"><div class="ml">Por persona (÷ <span id="mPagN">5</span>)</div><div class="mv" id="mCada">—</div><div class="ms" id="mCadaU">—</div></div>
   </div>
   <div class="g3">
     <div class="mc"><div class="ml">Papás Jorgie</div><div class="mv" id="mG1">—</div><div class="ms">entre 2</div><div class="mu" id="mG1u">—</div></div>
     <div class="mc"><div class="ml">Papás Gabby</div><div class="mv" id="mG2">—</div><div class="ms">entre 2</div><div class="mu" id="mG2u">—</div></div>
     <div class="mc"><div class="ml" id="lG3">Gabby</div><div class="mv" id="mG3">—</div><div class="ms">1 persona</div><div class="mu" id="mG3u">—</div></div>
+  </div>
+  <div style="background:#DFF4EA;border-left:3px solid var(--green);border-radius:var(--r2);padding:10px 13px;font-size:11.5px;line-height:1.65;color:#0D3D1F;margin-top:.5rem">
+    ✅ <strong>Hotel OZ + Airbnb ya están pagados</strong> — no se incluyen en lo que queda por pagar. Las actividades de arriba son el gasto pendiente a dividir entre el grupo.
   </div>
 </div>
 
@@ -438,15 +441,15 @@ tr:last-child td{border-bottom:none}
 <script>
 const D={
   nombre:'Jorgie',gabby:'Gabby',fecha1:'1 Jul 2025',fecha2:'6 Jul 2025',
-  pagadores:5,tasa:3500,hotel:5550000,airbnb:530000,PapasJorgie:2623000,
+  pagadores:5,tasa:3500,hotel:5500000,airbnb:530000,suegros:2623000,
   acts:[
-    {n:'Tour Tierra Bomba',v:4500000,on:true},
+    {n:'Tour Tierra Bomba · Palmarito Beach',v:4500000,on:true},
     {n:'Yate atardecer · barra abierta',v:400000,on:true},
-    {n:'Paddle SUP · El Laguito',v:65000,on:true},
+    {n:'Paddle SUP · El Laguito',v:120000,on:true},
     {n:'Chiva Rumbera Nocturna',v:500000,on:true},
-    {n:'Sky 51 Bar (entrada + cócteles)',v:400000,on:true},
+    {n:'Sky 51 Bar (entrada + cócteles)',v:500000,on:true},
     {n:'Cena cumpleaños (San Valentín o San Pascual)',v:500000,on:true},
-    {n:'Cocteles Getsemani 2x1',v:100000,on:true},
+    {n:'Pietrasanta Wine Window',v:100000,on:true},
     {n:'El Sombrerón ceviches',v:100000,on:true},
   ]
 };
@@ -471,7 +474,7 @@ const DAYS=[
     {t:'8:30a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ',d:'Dejar maletas · desayuno buffet incluido desde las 7am',p:'$35k–45k',s:''},
     {t:'9:00a',i:'🥐',n:'Desayuno buffet · Hotel OZ',d:'Incluido · check-in habitaciones después de las 3pm',p:'Incluido',s:'fr'},
     {t:'9:45a',i:'🚶',n:'Caminar hasta Playa Castillogrande',d:'~1.5 km a pie desde el OZ · detrás del Hospital Bocagrande · aquí salen las lanchas',p:'Gratis',s:'fr'},
-    {t:'10:00a',i:'🏝️',n:'Lancha → Tierra Bomba',d:'10 min en lancha · sale desde Playa Castillogrande (detrás del hospital) · lanchas cada 30 min de 9am–5pm',p:'~$110k–235k',s:'/persona'},
+    {t:'10:00a',i:'🏝️',n:'Lancha → Tierra Bomba · Palmarito Beach',d:'10 min en lancha · sale desde Playa Castillogrande (detrás del hospital) · lanchas cada 30 min de 9am–5pm',p:'~$110k–235k',s:'/persona'},
     {t:'5:00p',i:'🚶',n:'Lancha de regreso + caminata al OZ',d:'Regreso a Castillogrande · ~1.5 km caminando hasta el hotel',p:'Incluido',s:'fr'},
     {t:'5:30p',i:'🏨',n:'Check-in habitaciones · Hotel OZ',d:'Ducha · descanso · piscina rooftop · vista al Caribe',p:'',s:''},
     {t:'9:00p',i:'🌊',n:'Caminata nocturna · El Laguito',d:'Bordear la laguna · luces reflejadas en el agua · helados · ambiente exclusivo',p:'Gratis',s:'fr'},
@@ -492,7 +495,7 @@ const DAYS=[
     {t:'1:00p',i:'🍽️',n:'Almuerzo tranquilo · Bocagrande',d:'Restaurante local · a gusto del grupo',p:'~$35k–60k',s:'/persona'},
     {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar lindo y elegante a sus 30',p:'',s:''},
     {t:'7:30p',i:'🌹',n:'Cena cumpleaños · San Valentín o San Pascual',d:'Centro Histórico · cocina caribeña · música en vivo · ambiente festivo · reservar mencionando el cumple 30',p:'$60k–100k',s:'/persona'},
-    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · finalizar el cumpleaños arriba',d:'Piso 51 · 202m · vista 360° · piscina infinita · DJ · ~10 min Uber desde Centro Histórico y despues hasta el hotel',p:'$80k+',s:'entrada+cócteles'},
+    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · finalizar el cumpleaños arriba',d:'Piso 51 · 202m · vista 360° · piscina infinita · DJ · ~10 min Uber desde Centro Histórico',p:'$80k+',s:'entrada+cócteles'},
    ],
    extras:[
     {type:'choices'},
@@ -504,11 +507,11 @@ const DAYS=[
    badges:[{t:'🏰 Historia',c:''},{t:'🚌 Chiva rumbera',c:'g'}],
    evs:[
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza española más grande de América',p:'$25k/pers'},
+    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza española más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
     {t:'12:00p',i:'🌮',n:'Calle Tripita y Media · almuerzo local',d:'Getsemaní · ajiaco · mote de queso · sancocho desde $8.000',p:'$8k–18k',s:''},
     {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $20k',s:''},
     {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · atardecer',d:'Vista panorámica a la bahía y murallas históricas · gratis',p:'Gratis',s:'fr'},
-    {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad pero es mejor negociar en persona',p:'$90k–110k',s:'/persona'},
+    {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad',p:'$90k–110k',s:'/persona'},
    ],
    extras:[
     {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
@@ -517,10 +520,10 @@ const DAYS=[
   {num:5,fecha:'Sábado 5 Jul',tit:'Paddle SUP amanecer · Playa · Yate atardecer',
    badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌅 Despedida',c:''}],
    evs:[
-    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas y cristalinas · 28°C · sin oleaje · 900m caminando del OZ',p:'$70k',s:'/persona'},
+    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas y cristalinas · 28°C · sin oleaje · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
     {t:'9:00a',i:'🏖️',n:'Última mañana de playa · El Laguito',d:'A pie desde el hotel · último día de Caribe · sin afán',p:'$0',s:'fr'},
-    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$80k–90k',s:'/persona'},
+    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
     {t:'7:30p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
     {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia · el cierre perfecto del viaje',p:'$0',s:'fr'},
    ],
@@ -537,9 +540,9 @@ const DAYS=[
    badges:[{t:'✈️ 7:30am nacional',c:''},{t:'✈️ 9:45am internacional',c:''}],
    evs:[
     {t:'5:50a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 3h antes · ~15 min madrugada',p:'$45k–55k',s:''},
-    {t:'5:50a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.3 h antes',p:'$45k–55k',s:''},
+    {t:'5:50a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.5h antes',p:'$45k–55k',s:''},
     {t:'7:30a',i:'✈️',n:'Vuelo nacional sale',d:'Jorgie · Gabby · papás de Gabby',p:'',s:''},
-    {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️ Gracias por todos mis chicos',p:'',s:''},
+    {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️ Gracias a todos mis chicos',p:'',s:''},
    ],extras:[]}
 ];
 
@@ -741,8 +744,9 @@ function renderCostos(){
   });
   document.getElementById('tCOP').textContent=f(tot);
   document.getElementById('tPP').textContent=f(Math.round(tot/D.pagadores))+'/pers';
-  const gran=aloj+tot,cada=Math.round(gran/D.pagadores);
-  document.getElementById('mGT').textContent=f(gran);document.getElementById('mGTu').textContent='~'+u(gran);
+  const cada=Math.round(tot/D.pagadores);
+  const pN=document.getElementById('mPagN');if(pN)pN.textContent=D.pagadores;
+  document.getElementById('mGT').textContent=f(tot);document.getElementById('mGTu').textContent='~'+u(tot);
   document.getElementById('mCada').textContent=f(cada);document.getElementById('mCadaU').textContent='~'+u(cada)+' por persona';
   document.getElementById('mG1').textContent=f(cada*2);document.getElementById('mG1u').textContent='~'+u(cada*2);
   document.getElementById('mG2').textContent=f(cada*2);document.getElementById('mG2u').textContent='~'+u(cada*2);

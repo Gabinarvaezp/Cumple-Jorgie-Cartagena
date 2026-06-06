@@ -22,7 +22,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .hero-inner{position:relative;z-index:1}
 .hero-eye{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:600;margin-bottom:8px}
 .hero-title{font-family:'Playfair Display',serif;font-size:clamp(24px,7vw,44px);line-height:1.08;font-weight:700;margin-bottom:12px}
-.hero-title em{color:var(--gold2);font-style:italic}
 .hero-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
 .hchip{font-size:11px;padding:4px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;color:rgba(255,255,255,.78);background:rgba(255,255,255,.06)}
 
@@ -71,6 +70,21 @@ tr:last-child td{border-bottom:none}
 .act-off td{opacity:.35}
 @media(max-width:400px){th:nth-child(3),td:nth-child(3){display:none}}
 
+/* IVA BANNER */
+.iva-banner{background:var(--deep);border-radius:var(--r);padding:1rem 1.1rem;margin-bottom:.85rem;box-shadow:var(--sh)}
+.iva-title{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--gold2);margin-bottom:10px}
+.iva-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.iva-card{border-radius:var(--r2);padding:10px 12px}
+.iva-card.pay{background:rgba(196,74,40,.18);border:1px solid rgba(196,74,40,.3)}
+.iva-card.free{background:rgba(33,122,74,.18);border:1px solid rgba(33,122,74,.3)}
+.iva-clbl{font-size:8.5px;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:3px}
+.iva-card.pay .iva-clbl{color:#F4A28C}
+.iva-card.free .iva-clbl{color:#7FD4A8}
+.iva-cval{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px}
+.iva-cdesc{font-size:10px;color:rgba(255,255,255,.55);line-height:1.5}
+.iva-nota{font-size:10.5px;color:rgba(255,255,255,.6);line-height:1.6;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.iva-nota strong{color:var(--gold2)}
+
 /* AGENDA */
 .agenda{display:flex;flex-direction:column;gap:10px}
 .aday{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
@@ -100,7 +114,6 @@ tr:last-child td{border-bottom:none}
 .eprice{font-size:11.5px;font-weight:700;color:var(--teal);margin-top:2px}
 .eprice.fr{color:var(--green)}
 
-/* lugar strip */
 .lstrip{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:9px;padding:9px 14px;border-bottom:1px solid var(--border);background:rgba(24,36,58,.016)}
 .lstrip:last-of-type{border-bottom:none}
 .lico{font-size:20px;text-align:center}
@@ -111,7 +124,6 @@ tr:last-child td{border-bottom:none}
 .lbadge.ok{background:#DFF4EA;color:var(--green)}
 .lbadge.w{background:#FDF3DC;color:#7A4F00}
 
-/* ops */
 .ops{border-bottom:1px solid var(--border)}
 .opshdr{background:var(--deep);padding:6px 14px;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:700}
 .oprow{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;padding:9px 14px;border-top:1px solid var(--border);background:var(--surface)}
@@ -122,7 +134,6 @@ tr:last-child td{border-bottom:none}
 .oppp{font-size:9.5px;color:var(--muted);text-align:right}
 .opbest{font-size:8.5px;font-weight:700;color:var(--green);background:#DFF4EA;padding:1px 6px;border-radius:999px;display:inline-block;margin-left:4px;vertical-align:middle}
 
-/* info card (2 opciones restaurante) */
 .choices{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
 .choice{padding:11px 13px;border-right:1px solid var(--border)}
 .choice:last-child{border-right:none}
@@ -133,16 +144,39 @@ tr:last-child td{border-bottom:none}
 .choice-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;display:inline-block}
 .choice-badge.w{background:#FDF3DC;color:#7A4F00}
 
+/* DECAMERON card */
+.deca-card{margin:0;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(29,98,120,.05),rgba(192,138,46,.05));padding:13px 14px}
+.deca-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.deca-ico{font-size:24px}
+.deca-name{font-size:13px;font-weight:700;color:var(--deep)}
+.deca-tag{font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700}
+.deca-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.deca-item{background:var(--surface);border-radius:var(--r2);padding:8px 10px;border:1px solid var(--border)}
+.deca-ilbl{font-size:8.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:2px}
+.deca-ival{font-size:12.5px;font-weight:700;color:var(--deep)}
+.deca-idet{font-size:10px;color:var(--muted);margin-top:1px}
+/* fin de semana vs entre semana */
+.deca-vsbox{border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);margin-bottom:10px}
+.deca-vshdr{background:var(--deep);display:grid;grid-template-columns:1fr 1fr 1fr;padding:6px 10px;gap:4px}
+.deca-vshdr span{font-size:8.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:700;text-align:center}
+.deca-vsrow{display:grid;grid-template-columns:1fr 1fr 1fr;padding:9px 10px;gap:4px;border-top:1px solid var(--border);background:var(--surface)}
+.deca-vsrow:nth-child(even){background:var(--bg)}
+.deca-vslbl{font-size:11px;color:var(--muted);font-weight:500}
+.deca-vswk{font-size:12px;font-weight:700;color:var(--green);text-align:center}
+.deca-vswe{font-size:12px;font-weight:700;color:var(--coral);text-align:center}
+.deca-note{font-size:10.5px;color:var(--muted);line-height:1.55;margin-bottom:8px;padding:8px 10px;background:var(--bg);border-radius:var(--r2);border:1px solid var(--border)}
+.deca-incl{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.deca-chip{font-size:9.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:#DFF4EA;color:var(--green)}
+.deca-link{font-size:10.5px;color:var(--teal);font-weight:600;text-decoration:none;display:block}
+
 .ara-btn{display:flex;align-items:center;gap:7px;padding:9px 14px;border:none;background:none;border-top:1px solid var(--border);font-size:12px;font-weight:600;color:var(--green);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;width:100%;transition:background .12s}
 .ara-btn:active{background:rgba(33,122,74,.06)}
 .addEv-btn{display:flex;align-items:center;gap:6px;padding:9px 14px;border:none;background:none;border-top:1px solid var(--border);font-size:11.5px;font-weight:500;color:var(--teal);cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;width:100%;transition:background .12s}
 .addEv-btn:active{background:rgba(40,160,190,.06)}
 
-/* FAB */
 .fab{position:fixed;bottom:24px;right:20px;z-index:100;width:54px;height:54px;border-radius:50%;background:var(--deep);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(24,36,58,.35);transition:transform .15s}
 .fab:active{transform:scale(.93)}
 
-/* SHEETS */
 .sheet-bg{display:none;position:fixed;inset:0;background:rgba(24,36,58,.6);z-index:200;align-items:flex-end;justify-content:center}
 .sheet-bg.on{display:flex}
 .sheet{background:var(--surface);border-radius:var(--r) var(--r) 0 0;width:100%;max-width:600px;max-height:92vh;overflow-y:auto;padding:0 0 2rem}
@@ -198,7 +232,6 @@ tr:last-child td{border-bottom:none}
 .ara-tip{font-size:11px;color:var(--muted);padding:0 18px;line-height:1.7}
 .ara-close{display:block;margin:16px 18px 0;width:calc(100% - 36px);padding:12px;border:none;border-radius:var(--r2);background:var(--deep);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer}
 
-/* UBERS */
 .dcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:8px;margin-bottom:.85rem}
 .dc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:11px 12px;box-shadow:var(--sh)}
 .dr{font-size:12px;font-weight:600;margin-bottom:2px}
@@ -206,7 +239,6 @@ tr:last-child td{border-bottom:none}
 .dp{font-size:11.5px;font-weight:700;color:var(--teal);margin-top:3px}
 .dpf{color:var(--green)}
 
-/* FRASES */
 .fgrid{display:grid;gap:9px;margin-bottom:.85rem}
 .fcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:12px 14px;box-shadow:var(--sh)}
 .ftop{display:flex;gap:9px;align-items:flex-start;margin-bottom:7px}
@@ -215,7 +247,6 @@ tr:last-child td{border-bottom:none}
 .fa{font-size:10.5px;color:var(--muted);line-height:1.5;margin-top:2px}
 .fsay{font-size:12.5px;font-weight:600;color:var(--ocean);font-style:italic;line-height:1.55;background:rgba(29,98,120,.06);border-radius:var(--r2);padding:9px 12px;border-left:3px solid var(--teal)}
 
-/* TIPS */
 .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:9px}
 .tcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1rem;box-shadow:var(--sh)}
 .tico{font-size:20px;margin-bottom:6px}
@@ -255,6 +286,30 @@ tr:last-child td{border-bottom:none}
 
 <!-- COSTOS -->
 <div id="costos" class="sec on">
+
+  <!-- IVA SIMPLE -->
+  <div style="background:var(--deep);border-radius:var(--r);padding:1rem 1.1rem;margin-bottom:.85rem;box-shadow:var(--sh)">
+    <div style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--gold2);margin-bottom:10px">IVA 19% — habitaciones del Hotel OZ</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:10px">
+      <div style="background:rgba(196,74,40,.18);border:1px solid rgba(196,74,40,.3);border-radius:var(--r2);padding:9px 10px">
+        <div style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#F4A28C;font-weight:700;margin-bottom:3px">Pagan IVA</div>
+        <div style="font-size:12px;font-weight:700;color:#fff">Papás Gabby</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px">Residentes Colombia</div>
+      </div>
+      <div style="background:rgba(196,74,40,.18);border:1px solid rgba(196,74,40,.3);border-radius:var(--r2);padding:9px 10px">
+        <div style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#F4A28C;font-weight:700;margin-bottom:3px">Pagan IVA</div>
+        <div style="font-size:12px;font-weight:700;color:#fff">Jorgie + Gabby</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px">Gabby vive en Colombia</div>
+      </div>
+      <div style="background:rgba(33,122,74,.18);border:1px solid rgba(33,122,74,.3);border-radius:var(--r2);padding:9px 10px">
+        <div style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:#7FD4A8;font-weight:700;margin-bottom:3px">No pagan</div>
+        <div style="font-size:12px;font-weight:700;color:#fff">Papás Jorgie</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px">No residentes · pasaporte extranjero</div>
+      </div>
+    </div>
+    <div style="font-size:10.5px;color:rgba(255,255,255,.5);line-height:1.6;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)">💡 El IVA se cobra <strong style="color:var(--gold2)">por habitación</strong>, no por persona. 2 de 3 habitaciones pagan — la de los papás de Jorgie está exenta. Presentar pasaporte en el check-in. Mencionar que hay un <strong style="color:var(--gold2)">cumpleañero</strong> para que preparen sorpresa 🎂</div>
+  </div>
+
   <div class="dv">Alojamiento — ✅ ya pagado, no se divide</div>
   <div class="g2">
     <div class="mc"><div class="ml">Hotel OZ Collection</div><div class="mv" id="mH">—</div><div class="mu" id="mHu">—</div></div>
@@ -269,6 +324,7 @@ tr:last-child td{border-bottom:none}
       <div class="si"><div class="sdot" style="background:var(--gold)"></div><span id="sl2">—</span></div>
     </div>
   </div>
+
   <div class="dv">Actividades — lo que queda por pagar y dividir</div>
   <div class="tw">
     <table>
@@ -277,7 +333,8 @@ tr:last-child td{border-bottom:none}
       <tfoot><tr class="tf"><td></td><td style="font-size:12px">Total actividades</td><td id="tCOP" style="font-size:12px;font-weight:700">—</td><td id="tPP" style="font-size:11px;color:var(--green)">—</td></tr></tfoot>
     </table>
   </div>
-  <div class="dv">Actividades — queda por pagar</div>
+
+  <div class="dv">¿Cuánto pone cada quien? — solo actividades</div>
   <div class="g2">
     <div class="mc dk"><div class="ml">Total actividades</div><div class="mv" id="mGT">—</div><div class="ms" id="mGTu">—</div></div>
     <div class="mc dk"><div class="ml">Por persona (÷ <span id="mPagN">5</span>)</div><div class="mv" id="mCada">—</div><div class="ms" id="mCadaU">—</div></div>
@@ -288,7 +345,7 @@ tr:last-child td{border-bottom:none}
     <div class="mc"><div class="ml" id="lG3">Gabby</div><div class="mv" id="mG3">—</div><div class="ms">1 persona</div><div class="mu" id="mG3u">—</div></div>
   </div>
   <div style="background:#DFF4EA;border-left:3px solid var(--green);border-radius:var(--r2);padding:10px 13px;font-size:11.5px;line-height:1.65;color:#0D3D1F;margin-top:.5rem">
-    ✅ <strong>Hotel OZ + Airbnb ya están pagados</strong> — no se incluyen en lo que queda por pagar. Las actividades de arriba son el gasto pendiente a dividir entre el grupo.
+    ✅ <strong>Hotel OZ + Airbnb ya están pagados</strong> — no entran en la división. Solo las actividades se dividen entre el grupo.
   </div>
 </div>
 
@@ -305,18 +362,18 @@ tr:last-child td{border-bottom:none}
     <div class="dc"><div class="dr">✈️ Aeropuerto → Marbella</div><div class="dd">~7 km · ~15 min · Día 1</div><div class="dp">$45k–55k</div></div>
     <div class="dc"><div class="dr">🏠 Marbella → Ciudad Amurallada</div><div class="dd">~6 km · noche Día 1</div><div class="dp">$20k–28k</div></div>
     <div class="dc"><div class="dr">🏠 Marbella → Hotel OZ</div><div class="dd">~6 km · ~12 min · Día 2</div><div class="dp">$35k–45k</div></div>
-    <div class="dc"><div class="dr">🏖️ OZ → Playa Castillogrande</div><div class="dd">~1.5 km · 🚶 A PIE ~18 min</div><div class="dp dpf">Caminando · $0</div></div>
-    <div class="dc"><div class="dr">🏨 OZ → Getsemaní / Morena</div><div class="dd">~4.5 km · ~12 min</div><div class="dp">$18k–25k</div></div>
+    <div class="dc"><div class="dr">🏨 OZ → Getsemaní</div><div class="dd">~4.5 km · ~12 min</div><div class="dp">$18k–25k</div></div>
     <div class="dc"><div class="dr">🏨 OZ → Centro Histórico</div><div class="dd">~3.5 km · ~10 min</div><div class="dp">$15k–20k</div></div>
     <div class="dc"><div class="dr">🏨 OZ → Castillo San Felipe</div><div class="dd">~4 km · ~10 min</div><div class="dp">$18k–25k</div></div>
     <div class="dc"><div class="dr">🏨 OZ → Malecón Bahía Ánimas</div><div class="dd">~4 km · ~10 min</div><div class="dp">$18k–22k</div></div>
+    <div class="dc"><div class="dr">🌴 OZ → Barú · Decamerón</div><div class="dd">~1h 30min · transporte Decamerón</div><div class="dp">$50k/pers trayecto</div></div>
     <div class="dc"><div class="dr">🏄 OZ → El Laguito SUP</div><div class="dd">~900 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
     <div class="dc"><div class="dr">🍹 OZ → Sky 51</div><div class="dd">~250 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
     <div class="dc"><div class="dr">🏖️ OZ → Playa / Laguito</div><div class="dd">~200–900 m · 🚶 A PIE</div><div class="dp dpf">Caminando · $0</div></div>
-    <div class="dc"><div class="dr">✈️ OZ → Aeropuerto madrugada</div><div class="dd">~7.5 km · ~15 min · Día 6</div><div class="dp">$45k–60k</div></div>
+    <div class="dc"><div class="dr">✈️ OZ → Aeropuerto madrugada</div><div class="dd">~7.5 km · ~15 min · Día 7</div><div class="dp">$45k–60k</div></div>
   </div>
   <div class="g2">
-    <div class="mc"><div class="ml">Total Ubers estimado</div><div class="mv">~$380k</div><div class="mu">~ USD $109</div></div>
+    <div class="mc"><div class="ml">Total Ubers estimado</div><div class="mv">~$420k</div><div class="mu">~ USD $120</div></div>
     <div class="mc"><div class="ml">A pie desde OZ</div><div class="mv" style="font-size:12.5px;line-height:1.5">Playa · Laguito · Sky 51</div><div class="ms" style="color:var(--green)">Bocagrande es caminable ✓</div></div>
   </div>
 </div>
@@ -328,7 +385,7 @@ tr:last-child td{border-bottom:none}
   <div class="fgrid">
     <div class="fcard"><div class="ftop"><div class="fico">🎯</div><div><div class="fq">Cerrar el yate o las islas</div><div class="fa">Plata en mano es el argumento más fuerte del muelle.</div></div></div><div class="fsay">"¡Ajá, mi hermano! Somos 6 y el billete está aquí mismo. Nos deja todo por $X y nos vamos pa'l muelle ya mismo, sin cuentos."</div></div>
     <div class="fcard"><div class="ftop"><div class="fico">💰</div><div><div class="fq">Precio muy alto</div><div class="fa">El muelle tiene 20 operadores — ellos lo saben.</div></div></div><div class="fsay">"Erda, ¿me está mamando gallo? Ese tour me lo dan más barato allá. ¿Lo iguala o me voy donde el otro que sí quiere vender?"</div></div>
-    <div class="fcard"><div class="ftop"><div class="fico">🚌</div><div><div class="fq">Negociar la chiva</div><div class="fa">Por WhatsApp antes — más poder que cara a cara.</div></div></div><div class="fsay">"Somos 6 ¿Qué precio especial nos sale? Pagamos completo ahorita si nos hace el favor."</div></div>
+    <div class="fcard"><div class="ftop"><div class="fico">🚌</div><div><div class="fq">Negociar la chiva</div><div class="fa">Por WhatsApp antes — más poder que cara a cara.</div></div></div><div class="fsay">"Somos 6. ¿Qué precio especial nos sale? Pagamos completo ahorita si nos hace el favor."</div></div>
     <div class="fcard"><div class="ftop"><div class="fico">🤫</div><div><div class="fq">Técnica del silencio costeño</div><div class="fa">Proponer el precio y callarse. El primero en hablar, pierde.</div></div></div><div class="fsay">"Le doy $X en efectivo, ya. ¿Cerramos?" — silencio total. Ni mover una ceja.</div></div>
   </div>
   <div class="dv">Restaurantes y bares</div>
@@ -352,16 +409,15 @@ tr:last-child td{border-bottom:none}
     <div class="tcard"><div class="tico">📱</div><div class="ttit">Apps esenciales</div><ul class="cl"><li><strong>Uber XL</strong> — los 6 siempre juntos</li><li><strong>InDriver</strong> — tú propones el precio</li><li><strong>Google Maps offline</strong> — descargar antes</li><li><strong>WhatsApp</strong> — reservar todo</li></ul></div>
     <div class="tcard"><div class="tico">🌊</div><div class="ttit">El Laguito — el mejor rincón</div><div class="tbody">Laguna protegida a 28°C, sin oleaje, aguas cristalinas. Ideal para paddle, fotos y nadar. De noche las luces se reflejan en el agua. A 900m caminando del OZ.</div></div>
     <div class="tcard"><div class="tico">🏄</div><div class="ttit">Paddle SUP · Sáb 5 Jul</div><div class="tbody">Reservar 3–5 días antes por WhatsApp. Surf 420 y Colombia SUP operan en El Laguito mismo — pedir horario amanecer 5:30am.</div></div>
-    <div class="tcard"><div class="tico">📅</div><div class="ttit">Reservas — hacer YA</div><ul class="cl"><li>San Valentín Restaurante — WhatsApp: 310 415 3330</li><li>San Pascual Baylón — alternativa cumple</li><li>Morena Orígenes — 1 sem · Instagram DM</li><li>Tierra Bomba — reservar pasadía con Palmarito</li><li>Yate atardecer — Kakatua Tours</li><li>Chiva Rumbera — 3 días · chivarumbera.com</li><li>Paddle SUP — 3–5 días · Surf 420</li></ul></div>
-    <div class="tcard"><div class="tico">🎂</div><div class="ttit">Detalles cumple 30</div><ul class="cl"><li>Mencionar al reservar la cena del cumpleaños</li><li>Brindis a bordo del yate el sábado</li><li>Foto en Letras de Cartagena</li><li>Cocada con palenquera — foto icónica</li><li>Foto de cierre en el Laguito</li></ul></div>
-    <div class="tcard"><div class="tico">💵</div><div class="ttit">Plata y pagos</div><div class="tbody">Efectivo en billetes de $5.000 y $10.000. Cajero: Bancolombia en Plaza Bocagrande. No cambiar dólares en la calle.</div></div>
+    <div class="tcard"><div class="tico">📅</div><div class="ttit">Reservas — hacer YA</div><ul class="cl"><li>San Valentín — WhatsApp: 310 415 3330</li><li>San Pascual Baylón — @sanpascual.baylon</li><li>Decamerón Barú pasadía — decameron.com</li><li>Yate atardecer — Kakatua Tours</li><li>Chiva Rumbera — 3 días · chivarumbera.com</li><li>Paddle SUP — 3–5 días · Surf 420</li></ul></div>
+    <div class="tcard"><div class="tico">🎂</div><div class="ttit">Detalles cumple 30</div><ul class="cl"><li>Mencionar al reservar la cena cumpleaños</li><li>Brindis a bordo del yate el sábado</li><li>Foto en Letras de Cartagena</li><li>Cocada con palenquera — foto icónica</li><li>Foto de cierre en el Laguito</li></ul></div>
+    <div class="tcard"><div class="tico">⚠️</div><div class="ttit">IVA hotel — resumen rápido</div><div class="tbody">Colombianos residentes pagan 19% IVA sobre la habitación. Extranjeros no residentes están exentos si pagan con tarjeta internacional. Preguntar al check-in con pasaporte en mano — el hotel decide.</div></div>
   </div>
 </div>
 
 </div>
 <div class="footer">Hecho con ❤️ para el cumpleaños 30 de <span id="fNf">Jorgie</span> · Cartagena · 1–6 Jul 2025</div>
 
-<!-- FAB -->
 <button class="fab" onclick="openSheet()">⚙️</button>
 
 <!-- SHEET AJUSTES -->
@@ -433,113 +489,108 @@ tr:last-child td{border-bottom:none}
     <div class="ara-item"><div class="ara-prod">Papas fritas</div><div class="ara-ara">$4.500</div><div class="ara-playa">$16k–18k</div></div>
     <div class="ara-item"><div class="ara-prod">Gaseosa 400ml</div><div class="ara-ara">$2.000</div><div class="ara-playa">$15k–17k</div></div>
     <div class="ara-nota">💡 6 aguas + 6 cervezas + snacks en super = ~$60k. Lo mismo en playa = ~$200k. <strong>Ahorras ~$140k cada día de playa.</strong></div>
-    <div class="ara-tip"><strong>Llevar:</strong> bebidas del super · snacks · bolsas ziplock pa' los celulares · efectivo suelto · gafas · sombrero<br><br><strong>Evitar:</strong> masajes ambulantes (terminan carísimos) · mariscos sin refrigeración · fotos con palenqueras sin acordar precio antes</div>
+    <div class="ara-tip"><strong>Llevar:</strong> bebidas del super · snacks · bolsas ziplock pa' los celulares · efectivo suelto · gafas · sombrero<br><br><strong>Evitar:</strong> masajes ambulantes · mariscos sin refrigeración · fotos con palenqueras sin acordar precio antes</div>
     <button class="ara-close" onclick="closeAra()">Cerrar</button>
   </div>
 </div>
 
 <script>
+// Mié 1 · Jue 2 · Vie 3 (cumple) · Sáb 4 · Dom 5 · Lun 6 · Mar 7 (regreso)
+
 const D={
   nombre:'Jorgie',gabby:'Gabby',fecha1:'1 Jul 2025',fecha2:'6 Jul 2025',
   pagadores:5,tasa:3500,hotel:5500000,airbnb:530000,suegros:2623000,
   acts:[
-    {n:'Tour Tierra Bomba',v:450000,on:true},
     {n:'Yate atardecer · barra abierta',v:400000,on:true},
-    {n:'Paddle SUP · El Laguito',v:65000,on:true},
+    {n:'Paddle SUP · El Laguito',v:480000,on:true},
     {n:'Chiva Rumbera Nocturna',v:500000,on:true},
     {n:'Sky 51 Bar (entrada + cócteles)',v:500000,on:true},
     {n:'Cena cumpleaños (San Valentín o San Pascual)',v:500000,on:true},
-    {n:'Cocteles 2x1 Getsemani',v:100000,on:true},
+    {n:'Decamerón Barú · pasadía + transporte',v:1200000,on:true},
+    {n:'Getsemaní cocteles 2x1',v:100000,on:true},
     {n:'El Sombrerón ceviches',v:100000,on:true},
   ]
 };
 
 const DAYS=[
-  {num:1,fecha:'Martes 1 Jul · Llegada',tit:'Marbella · Ciudad Amurallada · Getsemaní noche',
-   badges:[{t:'✈️ 2:05p · 4:40p',c:''},{t:'🌃 Noche amurallada',c:'g'}],
+  // DÍA 1 — Miércoles 1 Jul
+  {num:1,fecha:'Miércoles 1 Jul · Llegada',tit:'Marbella · Decamerón Cartagena · Ciudad Amurallada',
+   badges:[{t:'✈️ 2:05p · 4:40p',c:''},{t:'🌴 Averiguar Decamerón',c:'y'},{t:'🌃 Noche amurallada',c:'g'}],
    evs:[
     {t:'2:05p',i:'✈️',n:'Papás de Jorgie aterrizan',d:'Vuelo internacional desde LA · esperan a los demás en el aeropuerto',p:'',s:''},
     {t:'2:30p',i:'🐟',n:'Ceviches frente al aeropuerto',d:'Puesto callejero · pescado y camarón frescos · mientras esperan a Jorgie y los demás',p:'~$38k',s:'USD $11'},
     {t:'4:40p',i:'✈️',n:'Jorgie + Gabby + papás de Gabby aterrizan',d:'Vuelo nacional · todos se reúnen por primera vez 🎉',p:'',s:''},
     {t:'5:15p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Los 6 juntos · ~7 km · ~15 min · dejar maletas y fresquear',p:'$45k–55k',s:''},
-    {t:'7:00p',i:'🚗',n:'Uber XL → Ciudad Amurallada',d:'~6 km desde Marbella',p:'~$22k',s:''},
-    {t:'7:15p',i:'🌃',n:'Caminata nocturna · Ciudad Amurallada',d:'Torre del Reloj · Plaza Santo Domingo · murallas iluminadas · músicos en cada esquina',p:'Gratis',s:'fr'},
-    {t:'9:00p',i:'🎨',n:'Getsemaní de noche',d:'Arte urbano gigante · bares locales · cumbia en las calles · cocteles 2×1 a $25k en Callejón Angosto',p:'Gratis',s:'fr'},
+    {t:'6:30p',i:'🌴',n:'Ir al Hotel Decamerón Cartagena · preguntar pasadía Barú',d:'Cra. 5 #30-11 · Ciudad Amurallada · preguntar por disponibilidad jueves o sábado · precio · transporte · y reservar ahí mismo',p:'Gratis',s:'fr'},
+    {t:'7:30p',i:'🚗',n:'Uber XL → Ciudad Amurallada',d:'~6 km desde Marbella',p:'~$22k',s:''},
+    {t:'7:45p',i:'🌃',n:'Caminata nocturna · Ciudad Amurallada',d:'Torre del Reloj · Plaza Santo Domingo · murallas iluminadas · músicos en cada esquina',p:'Gratis',s:'fr'},
+    {t:'9:00p',i:'🎨',n:'Getsemaní de noche',d:'Arte urbano · bares locales · cumbia en las calles · cocteles 2×1 a $25k en Callejón Angosto',p:'Gratis',s:'fr'},
     {t:'10:30p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Regreso todos juntos',p:'~$30k',s:''},
    ],extras:[]},
 
-  {num:2,fecha:'Miércoles 2 Jul',tit:'Check-in OZ · Tierra Bomba · Laguito de noche',
-   badges:[{t:'🏨 Hotel OZ',c:''},{t:'🏝️ Tierra Bomba',c:'g'},{t:'🌊 Laguito noche',c:''}],
+  // DÍA 2 — Jueves 2 Jul
+  {num:2,fecha:'Jueves 2 Jul',tit:'Check-in OZ · Piscina · Día flexible · Opciones',
+   badges:[{t:'🏨 Hotel OZ',c:''},{t:'🌊 Piscina relax',c:'g'},{t:'🎛️ Varias opciones',c:'y'}],
    evs:[
-    {t:'8:30a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ',d:'Dejar maletas · desayuno buffet incluido desde las 7am',p:'$35k–45k',s:''},
-    {t:'9:00a',i:'🥐',n:'Desayuno buffet · Hotel OZ',d:'Incluido · check-in habitaciones después de las 3pm',p:'Incluido',s:'fr'},
-    {t:'9:45a',i:'🚶',n:'Caminar hasta Playa Castillogrande',d:'~1.5 km a pie desde el OZ · detrás del Hospital Bocagrande · aquí salen las lanchas',p:'Gratis',s:'fr'},
-    {t:'10:00a',i:'🏝️',n:'Lancha → Tierra Bomba · Palmarito Beach',d:'10 min en lancha · sale desde Playa Castillogrande (detrás del hospital) · lanchas cada 30 min de 9am–5pm',p:'~$110k–235k',s:'/persona'},
-    {t:'5:00p',i:'🚶',n:'Lancha de regreso + caminata al OZ',d:'Regreso a Castillogrande · ~1.5 km caminando hasta el hotel',p:'Incluido',s:'fr'},
-    {t:'5:30p',i:'🏨',n:'Check-in habitaciones · Hotel OZ',d:'Ducha · descanso · piscina rooftop · vista al Caribe',p:'',s:''},
+    {t:'8:30a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ',d:'Dejar maletas · desayuno buffet incluido',p:'$35k–45k',s:''},
+    {t:'9:00a',i:'🥐',n:'Desayuno buffet · Hotel OZ',d:'Incluido · habitaciones se entregan a las 3pm',p:'Incluido',s:'fr'},
+    {t:'10:00a',i:'🏊',n:'Piscina rooftop · relax de mañana',d:'Vista al Caribe · disfrutar sin afán mientras esperan las habitaciones',p:'Incluido',s:'fr'},
+    {t:'12:00p',i:'🛍️',n:'CC Plaza Bocagrande · snacks y mercado',d:'5 min caminando del OZ · comprar snacks y bebidas para los días de playa · súper económico vs comprar en la playa',p:'~$60k',s:'grupo'},
+    {t:'3:00p',i:'🏨',n:'Check-in habitaciones · instalarse',d:'Ducha · descanso · piscina · vista al Caribe',p:'',s:'fr'},
     {t:'9:00p',i:'🌊',n:'Caminata nocturna · El Laguito',d:'Bordear la laguna · luces reflejadas en el agua · helados · ambiente exclusivo',p:'Gratis',s:'fr'},
    ],
-   extras:[
-    {type:'ops',label:'Opciones Tierra Bomba — Palmarito Beach',items:[
-      {n:'Palmarito Beach · pasadía',best:true,d:'Sale de Playa Castillogrande (detrás del Hospital Bocagrande) · almuerzo incluido · piscina · sillas · regreso a las 5pm',l:'https://palmaritobeach.com/',p:'~$150k–235k',pp:'/persona'},
-      {n:'Lancha informal · solo transporte',best:false,d:'Desde Playa Castillogrande · $7.500–15k por trayecto · salen cada 30 min de 9am–5pm',l:'',p:'$7k–15k',pp:'/trayecto'},
-      {n:'Playa Mística · pasadía',best:false,d:'Muelle La Bodeguita · salidas 9:30, 10:30, 11:30 y 1:30pm · regreso 5:30pm · almuerzo incluido',l:'https://playamistica.co/',p:'~$130k–200k',pp:'/persona'},
-    ]},
-   ]},
+   extras:[{type:'dia2ops'}]},
 
-  {num:3,fecha:'Jueves 3 Jul 🎂 CUMPLEAÑOS',tit:'Playa tranquila · Cena especial · Sky 51',
+  // DÍA 3 — Viernes 3 Jul 🎂 CUMPLEAÑOS
+  {num:3,fecha:'Viernes 3 Jul 🎂 CUMPLEAÑOS',tit:'Playa tranquila · Cena especial · Sky 51',
    badges:[{t:'🎂 El gran día',c:'r'},{t:'🍽️ Cena cumpleaños',c:'y'},{t:'🍹 Sky 51',c:'g'}],
    evs:[
     {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel · el día arranca relajado',p:'Incluido',s:'fr'},
     {t:'9:00a',i:'🏖️',n:'Playa El Laguito · mañana tranquila',d:'La zona más exclusiva · aguas cristalinas · a pie desde el hotel · sin afán',p:'$0',s:'fr'},
     {t:'1:00p',i:'🍽️',n:'Almuerzo tranquilo · Bocagrande',d:'Restaurante local · a gusto del grupo',p:'~$35k–60k',s:'/persona'},
     {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar lindo y elegante a sus 30',p:'',s:''},
-    {t:'7:30p',i:'🌹',n:'Cena cumpleaños · San Valentín o San Pascual',d:'Centro Histórico · cocina caribeña · música en vivo · ambiente festivo · reservar mencionando el cumple 30',p:'$60k–100k',s:'/persona'},
-    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · finalizar el cumpleaños arriba',d:'Piso 51 · 202m · vista 360° · piscina infinita · DJ · ~10 min Uber desde Centro Histórico',p:'$80k+',s:'entrada+cócteles'},
+    {t:'7:30p',i:'🌹',n:'Cena cumpleaños · San Valentín o San Pascual',d:'Centro Histórico · cocina caribeña · música en vivo · reservar mencionando el cumple 30',p:'$60k–100k',s:'/persona'},
+    {t:'10:00p',i:'🍹',n:'Sky 51 Bar · cerrar el cumpleaños arriba',d:'Piso 51 · 202m · piscina infinita · DJ · ~10 min Uber desde Centro Histórico',p:'$80k+',s:'entrada+cócteles'},
    ],
    extras:[
     {type:'choices'},
-    {type:'ara'},
     {type:'lugar',i:'🍹',n:'Sky 51 Bar',s:'A pie 250m del OZ · sin reserva · piscina infinita · DJ',l:'https://www.51skybar.com/',lt:'51skybar.com ↗',b:'ok',bt:'Sin reserva'},
    ]},
 
-  {num:4,fecha:'Viernes 4 Jul',tit:'Castillo San Felipe · Ceviches · Chiva Rumbera',
-   badges:[{t:'🏰 Historia',c:''},{t:'🚌 Chiva rumbera',c:'g'}],
+  // DÍA 4 — Sábado 4 Jul
+  {num:4,fecha:'Sábado 4 Jul',tit:'Paddle · Castillo · Yate · Chiva — o Decamerón Barú',
+   badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌴 Decamerón si eligieron hoy',c:''}],
    evs:[
+    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas · 28°C · sin oleaje · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
     {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza española más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
     {t:'12:00p',i:'🌮',n:'Calle Tripita y Media · almuerzo local',d:'Getsemaní · ajiaco · mote de queso · sancocho desde $8.000',p:'$8k–18k',s:''},
     {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $20k',s:''},
-    {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · atardecer',d:'Vista panorámica a la bahía y murallas históricas · gratis',p:'Gratis',s:'fr'},
+    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
     {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad',p:'$90k–110k',s:'/persona'},
    ],
    extras:[
     {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
+    {type:'deca'},
    ]},
 
-  {num:5,fecha:'Sábado 5 Jul',tit:'Paddle SUP amanecer · Playa · Yate atardecer',
-   badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌅 Despedida',c:''}],
+  // DÍA 5 — Domingo 5 Jul · flexible según lo que decidan en Decamerón
+  {num:5,fecha:'Domingo 5 Jul',tit:'🌴 Decamerón Barú (si eligieron sáb) · o Castillo + Malecón',
+   badges:[{t:'🌴 Decamerón si eligieron sáb',c:'y'},{t:'🏰 Castillo si no',c:''}],
    evs:[
-    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas y cristalinas · 28°C · sin oleaje · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
     {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'9:00a',i:'🏖️',n:'Última mañana de playa · El Laguito',d:'A pie desde el hotel · último día de Caribe · sin afán',p:'$0',s:'fr'},
-    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
-    {t:'7:30p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
-    {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia · el cierre perfecto del viaje',p:'$0',s:'fr'},
+    {t:'8:30a',i:'🌴',n:'Opción A: Decamerón Barú (si lo eligieron el sábado)',d:'~1h 30min · transporte Decamerón Explorer · pulsera todo incluido · barra abierta · Playa Blanca',p:'~$200k/pers',s:'todo incluido'},
+    {t:'9:30a',i:'🏰',n:'Opción B: Castillo San Felipe + ceviches + malecón',d:'Si el Decamerón fue el jueves · fortaleza más grande de América · túneles · guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
+    {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · último atardecer',d:'Vista panorámica · foto de familia · el cierre perfecto del viaje',p:'Gratis',s:'fr'},
+    {t:'8:00p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
    ],
-   extras:[
-    {type:'ara'},
-    {type:'ops',label:'Comparar — Paddle SUP',items:[
-      {n:'Surf 420 · El Laguito',best:true,d:'Punto exacto · tablas iSUP premium · amanecer · reservar WhatsApp 3–5 días antes',l:'https://cartagenasurf420.com/en/paddleboard/',p:'~$80k',pp:'1h · guía'},
-      {n:'Colombia SUP · El Laguito',best:false,d:'También en El Laguito · tours LED nocturnos · buenas reseñas',l:'',p:'~$85k',pp:'1h'},
-      {n:'Kakatua Tours · alternativa',best:false,d:'Bahía Castillogrande si El Laguito está lleno',l:'https://www.kakatuatours.com/',p:'Cotizar',pp:'grupo'},
-    ]},
-   ]},
+   extras:[{type:'deca'}]},
 
-  {num:6,fecha:'Domingo 6 Jul · Regreso',tit:'Vuelos separados · misión cumplida ❤️',
+  // DÍA 6 — Lunes 6 Jul · Regreso
+  {num:6,fecha:'Lunes 6 Jul · Regreso',tit:'Vuelos separados · misión cumplida ❤️',
    badges:[{t:'✈️ 7:30am nacional',c:''},{t:'✈️ 9:45am internacional',c:''}],
    evs:[
-    {t:'5:50a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 3h antes · ~15 min madrugada',p:'$45k–55k',s:''},
+    {t:'5:00a',i:'⏰',n:'Papás de Jorgie — Uber XL',d:'Vuelo internacional 9:45am · llegar 3h antes · ~15 min madrugada',p:'$45k–55k',s:''},
     {t:'5:50a',i:'⏰',n:'Jorgie + Gabby + papás de Gabby — Uber XL',d:'Vuelo nacional 7:30am · llegar 1.5h antes',p:'$45k–55k',s:''},
     {t:'7:30a',i:'✈️',n:'Vuelo nacional sale',d:'Jorgie · Gabby · papás de Gabby',p:'',s:''},
     {t:'9:45a',i:'✈️',n:'Vuelo internacional → LA',d:'Papás de Jorgie · misión cumplida ❤️ Gracias a todos mis chicos',p:'',s:''},
@@ -608,19 +659,62 @@ function renderDayBody(di){
       </div>`;
     } else if(ex.type==='ara'){
       html+=`<button class="ara-btn" onclick="event.stopPropagation();openAra()">🛒 Guía mercado — qué llevar a la playa</button>`;
+    } else if(ex.type==='dia2ops'){
+      html+=`<div class="ops"><div class="opshdr">Opciones para el día — elegir allá</div>
+        <div class="oprow"><div>
+          <div class="opname">🏝️ Tierra Bomba · negociar en la playa<span class="opbest">Si sale barato</span></div>
+          <div class="opdesc">Playa Castillogrande (detrás del hospital) · lanchas cada 30 min · negociar pasadía en Palmarito Beach o lancha informal · si el precio convence, ¡se va!</div>
+        </div><div><div class="opprice">$80k–235k</div><div class="oppp">/persona</div></div></div>
+        <div class="oprow"><div>
+          <div class="opname">🚌 Chiva Rumbera Nocturna</div>
+          <div class="opdesc">Si prefieren guardar Tierra Bomba para otro día · la chiva puede moverse al jueves en la noche · 3h · música en vivo · barra de licor · recorre toda la ciudad</div>
+          <a href="https://chivarumbera.com/" target="_blank" class="oplink">chivarumbera.com ↗</a>
+        </div><div><div class="opprice">$90k–110k</div><div class="oppp">/persona</div></div></div>
+        <div class="oprow"><div>
+          <div class="opname">🌊 Día de playa tranquilo · El Laguito</div>
+          <div class="opdesc">Si nadie quiere actividad intensa · tarde en el Laguito + caminata nocturna + cenar en Bocagrande · el plan más relajado</div>
+        </div><div><div class="opprice">Gratis</div><div class="oppp">playa</div></div></div>
+      </div>`;
+    } else if(ex.type==='deca'){
+      html+=`<div class="deca-card">
+        <div class="deca-top"><div class="deca-ico">🌴</div><div><div class="deca-tag">Pasadía todo incluido · Isla Barú</div><div class="deca-name">Decamerón Barú · Playa Blanca</div></div></div>
+        <div class="deca-grid">
+          <div class="deca-item"><div class="deca-ilbl">Pasadía aprox.</div><div class="deca-ival">~$200k/pers</div><div class="deca-idet">todo incluido + transporte</div></div>
+          <div class="deca-item"><div class="deca-ilbl">Transporte ida/vuelta</div><div class="deca-ival">~$50k/pers</div><div class="deca-idet">por trayecto · Decameron Explorer</div></div>
+          <div class="deca-item"><div class="deca-ilbl">Duración viaje</div><div class="deca-ival">~1h 30min</div><div class="deca-idet">desde Cartagena</div></div>
+          <div class="deca-item"><div class="deca-ilbl">Reservar con</div><div class="deca-ival">anticipación</div><div class="deca-idet">sujeto a disponibilidad</div></div>
+        </div>
+        <div class="deca-vsbox">
+          <div class="deca-vshdr"><span>Concepto</span><span>Entre semana 💚</span><span>Fin de semana 🔴</span></div>
+          <div class="deca-vsrow"><div class="deca-vslbl">Precio base</div><div class="deca-vswk">Menor</div><div class="deca-vswe">Con suplemento</div></div>
+          <div class="deca-vsrow"><div class="deca-vslbl">Disponibilidad</div><div class="deca-vswk">Más cupos</div><div class="deca-vswe">Se llena rápido</div></div>
+          <div class="deca-vsrow"><div class="deca-vslbl">Ambiente</div><div class="deca-vswk">Más tranquilo</div><div class="deca-vswe">Más animado</div></div>
+          <div class="deca-vsrow"><div class="deca-vslbl">Recomendación</div><div class="deca-vswk">✓ Lunes ideal</div><div class="deca-vswe">Reservar antes</div></div>
+        </div>
+        <div class="deca-note">⚠️ Decamerón aplica suplementos adicionales para fines de semana. El lunes es perfecto — menos gente, mismo precio base y misma experiencia. Verificar precio exacto al reservar en decameron.com ya que varía por temporada y disponibilidad.</div>
+        <div class="deca-incl">
+          <span class="deca-chip">🍹 Barra ilimitada</span>
+          <span class="deca-chip">🍽️ Almuerzo buffet</span>
+          <span class="deca-chip">🏊 Piscinas enormes</span>
+          <span class="deca-chip">🚣 Kayak · deportes</span>
+          <span class="deca-chip">🏖️ Playa privada</span>
+          <span class="deca-chip">🎾 Tenis</span>
+        </div>
+        <a href="https://www.decameron.com/es/co-promociones/especiales/decameron-baru" target="_blank" class="deca-link">decameron.com · reservar pasadía ↗</a>
+      </div>`;
     } else if(ex.type==='choices'){
       html+=`<div class="choices">
         <div class="choice">
-          <div class="choice-tag">Opción A · Ambiente festivo</div>
-          <div class="choice-name">🌹 San Valentín Cocina y Tragos</div>
-          <div class="choice-desc">Centro Histórico · Calle Vicente García #6-33 · música en vivo todas las noches · cocina caribeña · cazuela de mariscos top · ambiente festivo y lleno de energía</div>
+          <div class="choice-tag">Opción A · Festivo</div>
+          <div class="choice-name">🌹 San Valentín</div>
+          <div class="choice-desc">Calle Vicente García #6-33 · música en vivo · cocina caribeña · cazuela de mariscos · ambiente lleno de energía</div>
           <a href="https://www.sanvalentinrestaurantebar.com/" target="_blank" class="choice-link">sanvalentinrestaurantebar.com ↗</a>
           <span class="choice-badge w">📞 310 415 3330</span>
         </div>
         <div class="choice">
-          <div class="choice-tag">Opción B · Más íntimo</div>
-          <div class="choice-name">🌿 San Pascual Baylón</div>
-          <div class="choice-desc">Centro Histórico · Cra. 3a #33-88 · cocina colombiana costeña tradicional · 5.0 en TripAdvisor · ambiente más íntimo y cálido · reservar por Instagram</div>
+          <div class="choice-tag">Opción B · Íntimo</div>
+          <div class="choice-name">🌿 San Pascual</div>
+          <div class="choice-desc">Cra. 3a #33-88 · cocina costeña tradicional · 5.0 TripAdvisor · ambiente más cálido y tranquilo</div>
           <a href="https://san-pascual-baylon.cluvi.co/" target="_blank" class="choice-link">san-pascual-baylon.cluvi.co ↗</a>
           <span class="choice-badge w">📸 @sanpascual.baylon</span>
         </div>
@@ -729,7 +823,7 @@ function renderCostos(){
   const pct=Math.round(D.suegros/aloj*100);
   document.getElementById('sb1').style.width=pct+'%';document.getElementById('sb2').style.width=(100-pct)+'%';
   document.getElementById('sl1').textContent='Papás de Jorgie: '+f(D.suegros)+' ('+pct+'%)';
-  document.getElementById('sl2').textContent='Papás de Gabi y Gabby: '+f(nosAloj)+' ('+(100-pct)+'%)';
+  document.getElementById('sl2').textContent='Papás de Gabby y Gabby: '+f(nosAloj)+' ('+(100-pct)+'%)';
   const tb=document.getElementById('tbA');tb.innerHTML='';let tot=0;
   D.acts.forEach((a,i)=>{
     if(a.on)tot+=a.v;

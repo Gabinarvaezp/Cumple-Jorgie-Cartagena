@@ -409,7 +409,7 @@ tr:last-child td{border-bottom:none}
     <div class="tcard"><div class="tico">📱</div><div class="ttit">Apps esenciales</div><ul class="cl"><li><strong>Uber XL</strong> — los 6 siempre juntos</li><li><strong>InDriver</strong> — tú propones el precio</li><li><strong>Google Maps offline</strong> — descargar antes</li><li><strong>WhatsApp</strong> — reservar todo</li></ul></div>
     <div class="tcard"><div class="tico">🌊</div><div class="ttit">El Laguito — el mejor rincón</div><div class="tbody">Laguna protegida a 28°C, sin oleaje, aguas cristalinas. Ideal para paddle, fotos y nadar. De noche las luces se reflejan en el agua. A 900m caminando del OZ.</div></div>
     <div class="tcard"><div class="tico">🏄</div><div class="ttit">Paddle SUP · Sáb 5 Jul</div><div class="tbody">Reservar 3–5 días antes por WhatsApp. Surf 420 y Colombia SUP operan en El Laguito mismo — pedir horario amanecer 5:30am.</div></div>
-    <div class="tcard"><div class="tico">📅</div><div class="ttit">Reservas — hacer YA</div><ul class="cl"><li>San Valentín — WhatsApp: 310 415 3330</li><li>San Pascual Baylón — @sanpascual.baylon</li><li>Decamerón Barú pasadía — decameron.com</li><li>Yate atardecer — Kakatua Tours</li><li>Chiva Rumbera — 3 días · chivarumbera.com</li><li>Paddle SUP — 3–5 días · Surf 420</li></ul></div>
+    <div class="tcard"><div class="tico">📅</div><div class="ttit">Reservas — hacer YA</div><ul class="cl"><li>San Valentín — WhatsApp: 310 415 3330</li><li>San Pascual Baylón — @sanpascual.baylon</li><li>Kabanna Tierra Bomba — wa.link/hhsr07</li><li>Palmarito Beach — palmaritobeach.com</li><li>Yate atardecer — Kakatua Tours</li><li>Chiva Rumbera — 3 días · chivarumbera.com</li><li>Paddle SUP — 3–5 días · Surf 420</li></ul></div>
     <div class="tcard"><div class="tico">🎂</div><div class="ttit">Detalles cumple 30</div><ul class="cl"><li>Mencionar al reservar la cena cumpleaños</li><li>Brindis a bordo del yate el sábado</li><li>Foto en Letras de Cartagena</li><li>Cocada con palenquera — foto icónica</li><li>Foto de cierre en el Laguito</li></ul></div>
     <div class="tcard"><div class="tico">⚠️</div><div class="ttit">IVA hotel — resumen rápido</div><div class="tbody">Colombianos residentes pagan 19% IVA sobre la habitación. Extranjeros no residentes están exentos si pagan con tarjeta internacional. Preguntar al check-in con pasaporte en mano — el hotel decide.</div></div>
   </div>
@@ -506,7 +506,7 @@ const D={
     {n:'Chiva Rumbera Nocturna',v:500000,on:true},
     {n:'Sky 51 Bar (entrada + cócteles)',v:500000,on:true},
     {n:'Cena cumpleaños (San Valentín o San Pascual)',v:500000,on:true},
-    {n:'Decamerón Barú · pasadía + transporte',v:1200000,on:true},
+    {n:'Tierra Bomba · Pasadía (Kabanna o Palmarito)',v:1140000,on:true},
     {n:'Getsemaní cocteles 2x1',v:100000,on:true},
     {n:'El Sombrerón ceviches',v:100000,on:true},
   ]
@@ -514,42 +514,41 @@ const D={
 
 const DAYS=[
   // DÍA 1 — Miércoles 1 Jul
-  {num:1,fecha:'Miércoles 1 Jul · Llegada',tit:'Marbella · Decamerón Cartagena · Ciudad Amurallada',
-   badges:[{t:'✈️ 2:05p · 4:40p',c:''},{t:'🌴 Averiguar Decamerón',c:'y'},{t:'🌃 Noche amurallada',c:'g'}],
+  {num:1,fecha:'Miércoles 1 Jul · Llegada',tit:'Aterrizaje · Airbnb Marbella · Noche tranquila',
+   badges:[{t:'✈️ 2:05p · 4:40p',c:''},{t:'🏠 Noche en el Airbnb',c:'g'},{t:'😴 Descanso',c:''}],
    evs:[
     {t:'2:05p',i:'✈️',n:'Papás de Jorgie aterrizan',d:'Vuelo internacional desde LA · esperan a los demás en el aeropuerto',p:'',s:''},
     {t:'2:30p',i:'🐟',n:'Ceviches frente al aeropuerto',d:'Puesto callejero · pescado y camarón frescos · mientras esperan a Jorgie y los demás',p:'~$38k',s:'USD $11'},
     {t:'4:40p',i:'✈️',n:'Jorgie + Gabby + papás de Gabby aterrizan',d:'Vuelo nacional · todos se reúnen por primera vez 🎉',p:'',s:''},
-    {t:'5:15p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Los 6 juntos · ~7 km · ~15 min · dejar maletas y fresquear',p:'$45k–55k',s:''},
-    {t:'6:30p',i:'🌴',n:'Ir al Hotel Decamerón Cartagena · preguntar pasadía Barú',d:'Cra. 5 #30-11 · Ciudad Amurallada · preguntar por disponibilidad jueves o sábado · precio · transporte · y reservar ahí mismo',p:'Gratis',s:'fr'},
-    {t:'7:30p',i:'🚗',n:'Uber XL → Ciudad Amurallada',d:'~6 km desde Marbella',p:'~$22k',s:''},
-    {t:'7:45p',i:'🌃',n:'Caminata nocturna · Ciudad Amurallada',d:'Torre del Reloj · Plaza Santo Domingo · murallas iluminadas · músicos en cada esquina',p:'Gratis',s:'fr'},
-    {t:'9:00p',i:'🎨',n:'Getsemaní de noche',d:'Arte urbano · bares locales · cumbia en las calles · cocteles 2×1 a $25k en Callejón Angosto',p:'Gratis',s:'fr'},
-    {t:'10:30p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Regreso todos juntos',p:'~$30k',s:''},
+    {t:'5:15p',i:'🚗',n:'Uber XL → Airbnb Marbella',d:'Los 6 juntos · ~7 km · ~15 min · dejar maletas · fresquear · instalarse',p:'$45k–55k',s:''},
+    {t:'6:30p',i:'🛒',n:'Comprar algo de comer cerca al Airbnb',d:'Restaurante o comida rápida en Marbella · algo sencillo y cercano · nadie tiene ganas de viaje largo después de volar',p:'~$15k–30k',s:'/persona'},
+    {t:'8:00p',i:'😴',n:'Noche tranquila en el Airbnb',d:'Conversar · descansar · organizarse para madrugar al día siguiente · el viaje empieza de verdad mañana',p:'',s:'fr'},
+    {t:'8:30p',i:'⏰',n:'Alarmas para mañana — madrugar al OZ',d:'Salir antes de las 8:30am para llegar al OZ antes de las 9am y alcanzar el desayuno buffet incluido',p:'',s:'fr'},
    ],extras:[]},
 
   // DÍA 2 — Jueves 2 Jul
   {num:2,fecha:'Jueves 2 Jul',tit:'Check-in OZ · Piscina · Día flexible · Opciones',
    badges:[{t:'🏨 Hotel OZ',c:''},{t:'🌊 Piscina relax',c:'g'},{t:'🎛️ Varias opciones',c:'y'}],
    evs:[
-    {t:'8:30a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ',d:'Dejar maletas · desayuno buffet incluido',p:'$35k–45k',s:''},
-    {t:'9:00a',i:'🥐',n:'Desayuno buffet · Hotel OZ',d:'Incluido · habitaciones se entregan a las 3pm',p:'Incluido',s:'fr'},
+    {t:'7:30a',i:'🚗',n:'Uber XL Airbnb → Hotel OZ · madrugar',d:'Salir antes de las 8am · llegar al OZ antes de las 9am para alcanzar el desayuno buffet incluido',p:'$35k–45k',s:''},
+    {t:'8:30a',i:'🥐',n:'Desayuno buffet · Hotel OZ ☕',d:'Incluido · check-in formal de habitaciones después de las 3pm · dejar maletas en conserjería',p:'Incluido',s:'fr'},
     {t:'10:00a',i:'🏊',n:'Piscina rooftop · relax de mañana',d:'Vista al Caribe · disfrutar sin afán mientras esperan las habitaciones',p:'Incluido',s:'fr'},
     {t:'12:00p',i:'🛍️',n:'CC Plaza Bocagrande · snacks y mercado',d:'5 min caminando del OZ · comprar snacks y bebidas para los días de playa · súper económico vs comprar en la playa',p:'~$60k',s:'grupo'},
     {t:'3:00p',i:'🏨',n:'Check-in habitaciones · instalarse',d:'Ducha · descanso · piscina · vista al Caribe',p:'',s:'fr'},
     {t:'9:00p',i:'🌊',n:'Caminata nocturna · El Laguito',d:'Bordear la laguna · luces reflejadas en el agua · helados · ambiente exclusivo',p:'Gratis',s:'fr'},
    ],
-   extras:[{type:'dia2ops'}]},
+   extras:[{type:'tierrabomba'}]},
 
   // DÍA 3 — Viernes 3 Jul 🎂 CUMPLEAÑOS
-  {num:3,fecha:'Viernes 3 Jul 🎂 CUMPLEAÑOS',tit:'Playa tranquila · Cena especial · Sky 51',
-   badges:[{t:'🎂 El gran día',c:'r'},{t:'🍽️ Cena cumpleaños',c:'y'},{t:'🍹 Sky 51',c:'g'}],
+  {num:3,fecha:'Viernes 3 Jul 🎂 CUMPLEAÑOS',tit:'Relax total · Piscina · Juegos · Cena · Sky 51',
+   badges:[{t:'🎂 El gran día',c:'r'},{t:'🏊 Piscina & juegos',c:'g'},{t:'🍹 Sky 51',c:'y'}],
    evs:[
-    {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel · el día arranca relajado',p:'Incluido',s:'fr'},
+    {t:'7:00a',i:'🎂',n:'Desayuno buffet — ¡Feliz cumpleaños Jorgie!',d:'Incluido en el hotel · el día arranca relajado y sin afán',p:'Incluido',s:'fr'},
     {t:'9:00a',i:'🏖️',n:'Playa El Laguito · mañana tranquila',d:'La zona más exclusiva · aguas cristalinas · a pie desde el hotel · sin afán',p:'$0',s:'fr'},
-    {t:'1:00p',i:'🍽️',n:'Almuerzo tranquilo · Bocagrande',d:'Restaurante local · a gusto del grupo',p:'~$35k–60k',s:'/persona'},
-    {t:'3:30p',i:'🛁',n:'Siesta y arreglo para la noche',d:'El cumpleañero se merece llegar lindo y elegante a sus 30',p:'',s:''},
-    {t:'7:30p',i:'🌹',n:'Cena cumpleaños · San Valentín o San Pascual',d:'Centro Histórico · cocina caribeña · música en vivo · reservar mencionando el cumple 30',p:'$60k–100k',s:'/persona'},
+    {t:'11:30a',i:'🍹',n:'Regreso al hotel · snacks y bebidas en la piscina',d:'Piscina rooftop del OZ · vista al Caribe · música · relax total · el ritmo del cumpleaños',p:'Incluido',s:'fr'},
+    {t:'1:30p',i:'🎮',n:'Tarde de juegos y relax en la piscina',d:'UNO · Tejo de agua · dominó · lo que quieran · sin plan fijo · sin reloj · así se debe celebrar un 30',p:'Incluido',s:'fr'},
+    {t:'4:00p',i:'🛁',n:'Arreglo para la noche · el cumpleañero primero',d:'El festejado se merece llegar elegante y fresco a su noche especial',p:'',s:''},
+    {t:'7:30p',i:'🌹',n:'Cena cumpleaños · San Valentín o San Pascual',d:'Centro Histórico · cocina caribeña · música en vivo · reservar mencionando el cumple 30 para que preparen sorpresa 🎂',p:'$60k–100k',s:'/persona'},
     {t:'10:00p',i:'🍹',n:'Sky 51 Bar · cerrar el cumpleaños arriba',d:'Piso 51 · 202m · piscina infinita · DJ · ~10 min Uber desde Centro Histórico',p:'$80k+',s:'entrada+cócteles'},
    ],
    extras:[
@@ -557,34 +556,35 @@ const DAYS=[
     {type:'lugar',i:'🍹',n:'Sky 51 Bar',s:'A pie 250m del OZ · sin reserva · piscina infinita · DJ',l:'https://www.51skybar.com/',lt:'51skybar.com ↗',b:'ok',bt:'Sin reserva'},
    ]},
 
-  // DÍA 4 — Sábado 4 Jul
-  {num:4,fecha:'Sábado 4 Jul',tit:'Paddle · Castillo · Yate · Chiva — o Decamerón Barú',
-   badges:[{t:'🏄 SUP 5:30am',c:'g'},{t:'🛥️ Yate',c:'y'},{t:'🌴 Decamerón si eligieron hoy',c:''}],
+  // DÍA 4 — Sábado 4 Jul · Tierra Bomba
+  {num:4,fecha:'Sábado 4 Jul',tit:'🏝️ Tierra Bomba · Pasadía · Playa · Relax',
+   badges:[{t:'🏝️ Tierra Bomba',c:'g'},{t:'🏊 Piscina',c:'y'},{t:'🌊 Playa privada',c:''}],
    evs:[
-    {t:'5:30a',i:'🏄',n:'Paddle SUP · amanecer en El Laguito',d:'Aguas protegidas · 28°C · sin oleaje · 900m caminando del OZ',p:'$80k–100k',s:'/persona'},
-    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'9:30a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza española más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
+    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido · preparar lo que necesitan para el día de playa',p:'Incluido',s:'fr'},
+    {t:'8:00a',i:'🚶',n:'Caminar → Playa Castillogrande',d:'~1.5 km a pie desde el OZ · detrás del Hospital Bocagrande · aquí salen las lanchas',p:'Gratis',s:'fr'},
+    {t:'8:30a',i:'🚤',n:'Lancha → Tierra Bomba',d:'10 min en lancha · salidas continuas desde 8am hasta 12m según llegada y cupos',p:'Incluido',s:'fr'},
+    {t:'9:00a',i:'🏝️',n:'Día completo en Tierra Bomba',d:'Playa privada · piscina · kayak · paddle board · bodyboard · camas asoleadoras · música · almuerzo · cóctel de bienvenida',p:'Ver opciones',s:''},
+    {t:'2:30p',i:'🚤',n:'Lancha de regreso a Cartagena',d:'Últimas salidas desde las 2:30pm · regreso a Castillogrande',p:'Incluido',s:'fr'},
+    {t:'5:00p',i:'🌇',n:'Descanso en el hotel · piscina rooftop',d:'Tarde libre · piscina con vista al Caribe · recuperar energía',p:'Incluido',s:'fr'},
+    {t:'9:00p',i:'🌃',n:'Getsemaní de noche',d:'Arte urbano · bares locales · cumbia · cocteles 2×1 en Callejón Angosto',p:'Gratis',s:'fr'},
+   ],
+   extras:[{type:'tierrabomba'}]},
+
+  // DÍA 5 — Domingo 5 Jul · Último día · Yate
+  {num:5,fecha:'Domingo 5 Jul · Último día',tit:'Playa · Castillo · 🛥️ Yate atardecer · Despedida',
+   badges:[{t:'🏖️ Última playa',c:''},{t:'🛥️ Yate atardecer',c:'y'},{t:'🌅 Cierre épico',c:'g'}],
+   evs:[
+    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ · el último',d:'Incluido · disfrutarlo con calma',p:'Incluido',s:'fr'},
+    {t:'9:00a',i:'🏰',n:'Castillo San Felipe de Barajas',d:'Fortaleza española más grande de América · túneles · contratar guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
     {t:'12:00p',i:'🌮',n:'Calle Tripita y Media · almuerzo local',d:'Getsemaní · ajiaco · mote de queso · sancocho desde $8.000',p:'$8k–18k',s:''},
-    {t:'3:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $20k',s:''},
-    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL MOMENTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours',p:'$120k–150k',s:'/persona'},
-    {t:'9:30p',i:'🚌',n:'Chiva Rumbera Nocturna',d:'3h · música en vivo · barra de licor · recorre toda la ciudad',p:'$90k–110k',s:'/persona'},
+    {t:'2:00p',i:'🐟',n:'El Sombrerón · ceviches',d:'Cerca Torre del Reloj · el más famoso de la ciudad',p:'Desde $20k',s:''},
+    {t:'4:30p',i:'🛥️',n:'Yate al atardecer — EL CIERRE PERFECTO',d:'90 min · barra abierta · sol hundiéndose detrás de las murallas · Kakatua Tours · el último recuerdo del viaje',p:'$120k–150k',s:'/persona'},
+    {t:'7:30p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo · última noche en Cartagena',p:'',s:''},
+    {t:'9:30p',i:'🌅',n:'Último paseo · Malecón Bocagrande',d:'A pie · foto de familia · guardar ese momento para siempre ❤️',p:'Gratis',s:'fr'},
    ],
    extras:[
-    {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Negociar precio de grupo desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'⚠️ 3 días antes'},
-    {type:'deca'},
+    {type:'lugar',i:'🚌',n:'Chiva Rumbera',s:'Si quieren cerrar con todo · negociar precio desde el primer WhatsApp',l:'https://chivarumbera.com/',lt:'chivarumbera.com ↗',b:'w',bt:'Opcional esta noche'},
    ]},
-
-  // DÍA 5 — Domingo 5 Jul · flexible según lo que decidan en Decamerón
-  {num:5,fecha:'Domingo 5 Jul',tit:'🌴 Decamerón Barú (si eligieron sáb) · o Castillo + Malecón',
-   badges:[{t:'🌴 Decamerón si eligieron sáb',c:'y'},{t:'🏰 Castillo si no',c:''}],
-   evs:[
-    {t:'7:00a',i:'☕',n:'Desayuno buffet OZ',d:'Incluido',p:'Incluido',s:'fr'},
-    {t:'8:30a',i:'🌴',n:'Opción A: Decamerón Barú (si lo eligieron el sábado)',d:'~1h 30min · transporte Decamerón Explorer · pulsera todo incluido · barra abierta · Playa Blanca',p:'~$200k/pers',s:'todo incluido'},
-    {t:'9:30a',i:'🏰',n:'Opción B: Castillo San Felipe + ceviches + malecón',d:'Si el Decamerón fue el jueves · fortaleza más grande de América · túneles · guía en la entrada',p:'$25k/pers',s:'+$20k guía'},
-    {t:'5:00p',i:'🌇',n:'Malecón Bahía de las Ánimas · último atardecer',d:'Vista panorámica · foto de familia · el cierre perfecto del viaje',p:'Gratis',s:'fr'},
-    {t:'8:00p',i:'🍽️',n:'Cena de despedida · Bocagrande',d:'La Pepita u otro local · a gusto del grupo',p:'',s:''},
-   ],
-   extras:[{type:'deca'}]},
 
   // DÍA 6 — Lunes 6 Jul · Regreso
   {num:6,fecha:'Lunes 6 Jul · Regreso',tit:'Vuelos separados · misión cumplida ❤️',
@@ -659,48 +659,50 @@ function renderDayBody(di){
       </div>`;
     } else if(ex.type==='ara'){
       html+=`<button class="ara-btn" onclick="event.stopPropagation();openAra()">🛒 Guía mercado — qué llevar a la playa</button>`;
-    } else if(ex.type==='dia2ops'){
-      html+=`<div class="ops"><div class="opshdr">Opciones para el día — elegir allá</div>
+    } else if(ex.type==='tierrabomba'){
+      html+=`<div class="ops"><div class="opshdr">Comparar — Pasadías Tierra Bomba · elige el que más les guste</div>
+        <div class="oprow" style="background:linear-gradient(135deg,rgba(33,122,74,.04),transparent)"><div>
+          <div class="opname">🏅 Club Kabanna <span class="opbest">✓ Mejor precio</span></div>
+          <div class="opdesc">Tierra Bomba · piscina + DJ en vivo + playa privada con camas 2×2 · cóctel de bienvenida · 15 opciones de almuerzo (hasta $70k) · ducha agua dulce · transporte lancha ida/vuelta · 10 min desde Cartagena</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:5px">
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🍹 Cóctel bienvenida</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🍽️ Almuerzo 15 opciones</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🏊 Piscina</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🎵 DJ en vivo</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🛏️ Camas frente al mar</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🚤 Transporte incluido</span>
+          </div>
+          <a href="https://wa.link/hhsr07" target="_blank" class="oplink">Reservar WhatsApp Kabanna ↗</a>
+          <a href="https://www.clubkabanna.com/pasadia/" target="_blank" class="oplink">clubkabanna.com ↗</a>
+        </div><div style="text-align:right;flex-shrink:0;min-width:80px">
+          <div style="font-size:16px;font-weight:800;color:var(--green)">$190k</div>
+          <div style="font-size:9.5px;color:var(--muted)">/persona</div>
+          <div style="font-size:9px;font-weight:600;color:var(--coral);margin-top:4px">Básico</div>
+          <div style="font-size:14px;font-weight:700;color:var(--muted);margin-top:4px">$140k</div>
+          <div style="font-size:9px;color:var(--muted)">Económico</div>
+        </div></div>
         <div class="oprow"><div>
-          <div class="opname">🏝️ Tierra Bomba · negociar en la playa<span class="opbest">Si sale barato</span></div>
-          <div class="opdesc">Playa Castillogrande (detrás del hospital) · lanchas cada 30 min · negociar pasadía en Palmarito Beach o lancha informal · si el precio convence, ¡se va!</div>
-        </div><div><div class="opprice">$80k–235k</div><div class="oppp">/persona</div></div></div>
-        <div class="oprow"><div>
-          <div class="opname">🚌 Chiva Rumbera Nocturna</div>
-          <div class="opdesc">Si prefieren guardar Tierra Bomba para otro día · la chiva puede moverse al jueves en la noche · 3h · música en vivo · barra de licor · recorre toda la ciudad</div>
-          <a href="https://chivarumbera.com/" target="_blank" class="oplink">chivarumbera.com ↗</a>
-        </div><div><div class="opprice">$90k–110k</div><div class="oppp">/persona</div></div></div>
-        <div class="oprow"><div>
-          <div class="opname">🌊 Día de playa tranquilo · El Laguito</div>
-          <div class="opdesc">Si nadie quiere actividad intensa · tarde en el Laguito + caminata nocturna + cenar en Bocagrande · el plan más relajado</div>
-        </div><div><div class="opprice">Gratis</div><div class="oppp">playa</div></div></div>
-      </div>`;
-    } else if(ex.type==='deca'){
-      html+=`<div class="deca-card">
-        <div class="deca-top"><div class="deca-ico">🌴</div><div><div class="deca-tag">Pasadía todo incluido · Isla Barú</div><div class="deca-name">Decamerón Barú · Playa Blanca</div></div></div>
-        <div class="deca-grid">
-          <div class="deca-item"><div class="deca-ilbl">Pasadía aprox.</div><div class="deca-ival">~$200k/pers</div><div class="deca-idet">todo incluido + transporte</div></div>
-          <div class="deca-item"><div class="deca-ilbl">Transporte ida/vuelta</div><div class="deca-ival">~$50k/pers</div><div class="deca-idet">por trayecto · Decameron Explorer</div></div>
-          <div class="deca-item"><div class="deca-ilbl">Duración viaje</div><div class="deca-ival">~1h 30min</div><div class="deca-idet">desde Cartagena</div></div>
-          <div class="deca-item"><div class="deca-ilbl">Reservar con</div><div class="deca-ival">anticipación</div><div class="deca-idet">sujeto a disponibilidad</div></div>
-        </div>
-        <div class="deca-vsbox">
-          <div class="deca-vshdr"><span>Concepto</span><span>Entre semana 💚</span><span>Fin de semana 🔴</span></div>
-          <div class="deca-vsrow"><div class="deca-vslbl">Precio base</div><div class="deca-vswk">Menor</div><div class="deca-vswe">Con suplemento</div></div>
-          <div class="deca-vsrow"><div class="deca-vslbl">Disponibilidad</div><div class="deca-vswk">Más cupos</div><div class="deca-vswe">Se llena rápido</div></div>
-          <div class="deca-vsrow"><div class="deca-vslbl">Ambiente</div><div class="deca-vswk">Más tranquilo</div><div class="deca-vswe">Más animado</div></div>
-          <div class="deca-vsrow"><div class="deca-vslbl">Recomendación</div><div class="deca-vswk">✓ Lunes ideal</div><div class="deca-vswe">Reservar antes</div></div>
-        </div>
-        <div class="deca-note">⚠️ Decamerón aplica suplementos adicionales para fines de semana. El lunes es perfecto — menos gente, mismo precio base y misma experiencia. Verificar precio exacto al reservar en decameron.com ya que varía por temporada y disponibilidad.</div>
-        <div class="deca-incl">
-          <span class="deca-chip">🍹 Barra ilimitada</span>
-          <span class="deca-chip">🍽️ Almuerzo buffet</span>
-          <span class="deca-chip">🏊 Piscinas enormes</span>
-          <span class="deca-chip">🚣 Kayak · deportes</span>
-          <span class="deca-chip">🏖️ Playa privada</span>
-          <span class="deca-chip">🎾 Tenis</span>
-        </div>
-        <a href="https://www.decameron.com/es/co-promociones/especiales/decameron-baru" target="_blank" class="deca-link">decameron.com · reservar pasadía ↗</a>
+          <div class="opname">🌴 Palmarito Beach</div>
+          <div class="opdesc">Tierra Bomba · Playa Dorada · cóctel bienvenida + almuerzo buffet + kayak + paddle board + bodyboard + camas asoleadoras + hamacas + piscina agua dulce · transporte lancha ida/vuelta · salidas 8am–12m desde Castillogrande · regreso 2:30pm</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:5px">
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🍹 Cóctel bienvenida</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🍽️ Almuerzo buffet</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🚣 Kayak + paddle</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🏊 Piscina</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🛏️ Camas asoleadoras</span>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;background:#DFF4EA;color:var(--green)">🚤 Transporte incluido</span>
+          </div>
+          <a href="https://palmaritobeach.sky-hub.co/daytour-checkout-sky" target="_blank" class="oplink">Reservar en línea Palmarito ↗</a>
+          <a href="https://palmaritobeach.com/pasadia-daytour-tierra-bomba-cartagena" target="_blank" class="oplink">palmaritobeach.com ↗</a>
+        </div><div style="text-align:right;flex-shrink:0;min-width:80px">
+          <div style="font-size:16px;font-weight:800;color:var(--teal)">$230k</div>
+          <div style="font-size:9.5px;color:var(--muted)">/adulto</div>
+          <div style="font-size:12px;font-weight:600;color:var(--muted);margin-top:4px">$180k</div>
+          <div style="font-size:9px;color:var(--muted)">niños 4–10</div>
+        </div></div>
+      </div>
+      <div style="background:#FDF3DC;border-left:3px solid var(--gold);border-radius:0 var(--r2) var(--r2) 0;padding:9px 13px;font-size:11px;color:#4A3000;line-height:1.6">
+        💡 <strong>Tip:</strong> Kabanna tiene DJ en vivo y el ambiente más fiestero. Palmarito tiene más actividades acuáticas (kayak, paddle) y buffet libre. Los dos incluyen transporte. <strong>Kabanna sale $40k más barato por persona</strong> — con 6 personas ahorra $240k en total.
       </div>`;
     } else if(ex.type==='choices'){
       html+=`<div class="choices">
